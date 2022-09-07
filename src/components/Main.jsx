@@ -7,10 +7,11 @@ const Main = () => {
 
   return (
     <div id='home' className='w-[90%] m-auto md:h-screen text-center p-2 flex items-center'>
-      <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex flex-col justify-center items-center'>
-      {/* <canvas className='flex flex-col justify-center' id='ball-place' data-aos='fade-in' data-aos-mirror='false' data-aos-delay='200' data-aos-duration='2000'></canvas> */}
-        <RotatingGlobe />
-        <div className='flex flex-col main'>
+      <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex flex-col justify-center items-center main-with-globe'>
+        <div className='rotating-globe' >
+          <RotatingGlobe  />
+        </div>
+        <div className='flex flex-col main home-intro'>
           <h1 
             className='pb-2 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap' 
             data-aos='fade-right' 

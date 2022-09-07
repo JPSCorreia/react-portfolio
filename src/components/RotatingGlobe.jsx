@@ -11,24 +11,24 @@ import javascriptImg from '../assets/javascript-icon.png'
 import nodeImg from '../assets/node-icon.png'
 import postgresqlImg from '../assets/postgresql-icon.png'
 import reduxImg from '../assets/redux-icon.png'
-import { ACESFilmicToneMapping, NoToneMapping, sRGBEncoding } from 'three'
 import * as THREE from 'three'
+import { useMediaQuery } from 'react-responsive'
 
 function RotatingGlobe() {
 
-  // const color1 = new THREE.Color("#67E8F9");
   const color2 = new THREE.Color("#22D3F8");
-
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   return (
     <Canvas 
+      className='ball'
+      width='375px'
+      height='820px'
+      id='#ball-place'
       gl={
         { 
           alpha:true, 
           antialias:true,
-          // toneMapping: NoToneMapping,
-          // toneMappingExposure: 1,
-          // colorManagement: false,
         }
       } 
       
@@ -38,7 +38,6 @@ function RotatingGlobe() {
       data-aos-delay='200' 
       data-aos-duration='3000'
     >
-      {/* <color attach="background" args={['#127040']} /> */}
       <group>
       <ambientLight />
       <directionalLight color={color2} position={[0, -1, 0]} intensity={1.25}/>
@@ -56,7 +55,9 @@ function RotatingGlobe() {
       <Sprite url={expressImg} position={[51, 0, -51]} color='#ffffff' />
       <Sprite url={postgresqlImg} position={[72.5, 0, 0]} color='#31648d' />
       <Sprite url={reduxImg} position={[51, 0, 51]} color='#764abc'/>
-      <OrbitControls enablePan={false} enableZoom={false}  />
+      {
+        isTabletOrMobile? '' : <OrbitControls className='orbit-controls' enablePan={false} enableZoom={false} />
+      }
       </group>
     </Canvas>
   )
