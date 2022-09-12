@@ -3,13 +3,10 @@ import React from 'react'
 
 const ProjectItem = (props) => {
   return (
-    <div className='relative flex items-center justify-center cursor-pointer h-auto w-full shadow-xl shadow-[#67E8F9] rounded-xl p-4 group hover:bg-gradient-to-r from-[#0891B2] to-[#67E8F9] '>
-    {/* <Link href={`/${props.projectUrl}#${props.projectUrl}`} scroll={false}> */}
+    <div className='relative flex items-center justify-center cursor-pointer h-auto w-full shadow-custom3 shadow-[#67E8F9]  p-4 group hover:bg-gradient-to-r from-[#0891B2] to-[#67E8F9] '>
     <>
-    <img className='rounded-xl group-hover:opacity-40 ' src={props.backgroundImg} alt='/' />
+    <img className=' group-hover:opacity-20 ' src={props.backgroundImg} alt='/' />
     </>
-    {/* </Link> */}
-    {/* <Link href={props.projectUrl}> */}
     <div className='absolute'>
       <h3 className='absolute translate-x-[-50%] translate-y-[-250%] left-[50%] top-[50%] hidden group-hover:block text-2xl md:text-2xl lg:text-4xl text-white tracking-wider text-center'>
        {props.title}
@@ -21,7 +18,6 @@ const ProjectItem = (props) => {
         More Info
       </p>
     </div>
-    {/* </Link> */}
   </div>
   )
 }

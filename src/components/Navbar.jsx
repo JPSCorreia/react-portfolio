@@ -6,7 +6,7 @@ import {GrMail} from 'react-icons/gr'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { HashLink } from 'react-router-hash-link';
-import jcorreia from '../assets/jcorreia-fullstackdev-2.png';
+// import jcorreia from '../assets/jcorreia-fullstackdev-2.png';
 
 
 function Navbar() {
@@ -23,25 +23,25 @@ function Navbar() {
   }, [])
 
   const [nav, setNav] = useState(false)
-  const [shadow, setShadow] = useState(false)
+  // const [shadow, setShadow] = useState(false)
 
   const handleNav = () => {
     setNav(!nav)
   }
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const handleShadow = () => {
-      if (window.scrollY >= 1) {
-        setShadow(true)
-      } else {
-        setShadow(false)
-      }
-    }
+  //   const handleShadow = () => {
+  //     if (window.scrollY >= 1) {
+  //       setShadow(true)
+  //     } else {
+  //       setShadow(false)
+  //     }
+  //   }
 
-    window.addEventListener('scroll', handleShadow)
+  //   window.addEventListener('scroll', handleShadow)
 
-  }, [])
+  // }, [])
 
   // 
   return (

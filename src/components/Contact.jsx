@@ -9,17 +9,17 @@ const Contact = () => {
     <div id='contact' className='w-[90%] m-auto md:h-screen pt-6 mt-32 mb-0 lg:mb-32 xl:mb-0'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full flex flex-col justify-center h-full'>
         <p id='contact-start' className='text-xl tracking-widest uppercase text-[#67E8F9]' data-aos='fade-right' data-aos-anchor='#contact'>Contact</p>
-        <h2 className='py-4' data-aos='fade-right' data-aos-anchor='#contact'>Get In Touch</h2>
+        <h2 className='py-4 mb-4' data-aos='fade-right' data-aos-anchor='#contact'>Get In Touch</h2>
         <div className='' data-aos='fade-in' data-aos-anchor='#contact'>
-          <div className='w-full shadow-xl shadow-[#67E8F9] rounded-xl p-4 justify-center flex flex-col mx-auto'>
+          <div className='w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto'>
             <div className='lg:p-4 h-full '>
               <div className=' flex flex-row justify-between'>
                 <div className=''>
                   <h2 className='pb-2' id='contact-name'>João Correia</h2>
                   <p>Full Stack Developer</p>
-                  <p className='mt-4'>Available for freelance or full-time positions.</p>
+                  <p className='mt-8'>Available for freelance or full-time positions.</p>
                   <p>Contact me so we can talk.</p>
-                  <div className='flex m-auto items-center justify-start py-1'>
+                  {/* <div className='flex m-auto items-center justify-start py-1'>
                     <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] ml-0 p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
                       <FaLinkedinIn size={24}/>
                     </div>
@@ -32,7 +32,7 @@ const Contact = () => {
                     <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
                       <BsFillPersonLinesFill size={24}/>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className='hidden lg:block w-[300px]'>
                   <img className='animated-image rounded-xl hover:scale-105 ease-in duration-300' src={contact} alt='' />

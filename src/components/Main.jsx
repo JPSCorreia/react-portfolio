@@ -19,7 +19,7 @@ const Main = () => {
           >
             Hi, I'm <span className='text-[#67E8F9]'>João Correia</span><span className='text-gray-100'>,</span>
           </h1>
-          <h1 className='pb-6 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap' data-aos='fade-right' data-aos-anchor='#home'>
+          <h1 className='pb-8 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap' data-aos='fade-right' data-aos-anchor='#home'>
             web developer.
           </h1>
           <div className='flex flex-col' data-aos='fade-up' data-aos-anchor='#home'>

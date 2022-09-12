@@ -1,9 +1,6 @@
 import React, { useRef } from 'react'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { TextureLoader } from "three";
-// import { useTexture } from '@react-three/drei';
-import { ACESFilmicToneMapping, NoToneMapping } from 'three'
-import * as THREE from 'three';
 
 const Sprite = ({url, position, color, ...props}) => {
 
@@ -14,11 +11,6 @@ const Sprite = ({url, position, color, ...props}) => {
   })
 
   const texture = useLoader(TextureLoader, url)
-
-  const color1 = new THREE.Color("#67E8F9");
-  const color2 = new THREE.Color("#22D3F8");
-
-  // const texture = useTexture(url)
   
   return (
     <group ref={sprites}>
@@ -29,16 +21,9 @@ const Sprite = ({url, position, color, ...props}) => {
             { 
               alpha:true, 
               antialias:true,
-              // toneMapping: ACESFilmicToneMapping,
-              // toneMappingExposure: 0.5,
-              // colorManagement: false,
-              // lightMapIntensity: 4,       
-              // attenuationColor: color1,
-              // sheenColor: color2,
             }
           } 
           map={texture}  
-          // color={color} 
           fog={false} 
           opacity={0.85}
         />

@@ -1,9 +1,7 @@
 import React from 'react'
 import { HashLink } from 'react-router-hash-link';
-import { FaHome } from 'react-icons/fa'
-import { RiArrowGoBackFill, RiHome2Fill } from 'react-icons/ri'
+import { RiHome2Fill } from 'react-icons/ri'
 import { TiArrowBack } from 'react-icons/ti'
-import { AiOutlineStop } from 'react-icons/ai'
 import { BsOctagon, BsOctagonFill } from 'react-icons/bs'
 
 const NotFound = () => {
