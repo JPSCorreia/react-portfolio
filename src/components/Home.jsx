@@ -6,6 +6,7 @@ import Projects from './Projects'
 import Contact from './Contact'
 import Scroller from './Scroller'
 
+
 const Home = () => {
   return (
     <main className='maincontainer'>

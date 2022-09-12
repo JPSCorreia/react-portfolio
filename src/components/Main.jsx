@@ -9,7 +9,7 @@ const Main = () => {
     <div id='home' className='w-[90%] m-auto md:h-screen text-center p-2 flex items-center'>
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex flex-col justify-center items-center main-with-globe'>
         <div className='rotating-globe' >
-          <RotatingGlobe  />
+          {/* <RotatingGlobe  /> */}
         </div>
         <div className='flex flex-col main home-intro'>
           <h1 

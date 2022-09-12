@@ -5,7 +5,7 @@ import profile from '../assets/profile.png'
 const About = () => {
 
   return (
-    <div id='about' className='w-[90%] m-auto md:h-screen p-2 flex items-center pt-44 md:pt-16 mt-32'>
+    <div id='about' className='w-[90%] m-auto md:h-screen p-2 flex items-center pt-44 pb-24 md:pt-16 mt-32'>
       <div className='max-w-[1240px] mx-auto flex justify-between'           data-aos='fade-right'
           data-aos-anchor='#about'>
         <div 

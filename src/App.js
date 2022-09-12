@@ -6,8 +6,20 @@ import TLDReddit from "./components/TLDReddit";
 import React from 'react'
 import NotFound from "./components/NotFound";
 import { Routes, Route } from "react-router";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
+
+  function useScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  }
+  useScrollToTop();
+  
   return (
     <>
       <Particle />
