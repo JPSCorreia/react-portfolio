@@ -5,11 +5,12 @@ import {AiOutlineMail} from 'react-icons/ai'
 // import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
 // import {BsFillPersonLinesFill} from 'react-icons/bs'
 import {TiTickOutline, TiTimesOutline} from 'react-icons/ti'
-import { Button } from '@chakra-ui/react'
 import { contactSchema } from '../validations/ContactValidation';
 import { useFormik } from 'formik';
+import { EmailIcon, CheckIcon, WarningIcon } from '@chakra-ui/icons';
 
 import {
+  Button,
   FormControl,
   Input,
   FormLabel,
@@ -20,12 +21,10 @@ import {
 } from '@chakra-ui/react';
 
 const Contact = () => {
-
   const toast = useToast();
-  const [submitted, setSubmitted] = useState('notSubmitted')
+  const [submitted, setSubmitted] = useState('notSubmitted');
 
   const formik = useFormik({
-
     initialValues: {
       user_name: '',
       user_email: '',
@@ -35,8 +34,7 @@ const Contact = () => {
     },
     validationSchema: contactSchema,
     onSubmit: (values, actions) => {
-
-      console.log(values)
+      console.log(values);
 
       setSubmitted('loading');
       emailjs
@@ -49,89 +47,87 @@ const Contact = () => {
         .then(
           () => {
             toast({
-                title: 'Message Sent.',
-                description: "Thank you, I will contact you back.",
-                status: 'success',
-                isClosable: true,
-              });
+              title: 'Message Sent.',
+              description: 'Thank you, I will contact you back.',
+              status: 'success',
+              isClosable: true,
+            });
             setSubmitted('submitted');
           },
           (error) => {
-              toast({
-                title: 'Error.',
-                description: "Something went wrong, please try again.",
-                status: 'error',
-                isClosable: true,
-              });
+            toast({
+              title: 'Error.',
+              description: 'Something went wrong, please try again.',
+              status: 'error',
+              isClosable: true,
+            });
             setSubmitted('error');
           }
         );
     },
   });
 
-
   const renderButton = () => {
     switch (submitted) {
-        case "submitted":
-          return (
-            <div 
-              id='send-button' 
-              value="Send" 
-              className='cursor-default flex flex-center text-xl text-[#60f073] text-center align-items justify-center m-auto hover:scale-110 ease-in duration-100 uppercase'
-            >
-              Submitted
-              <TiTickOutline  size={29} className='ml-2'/>
-            </div>
-          )
-        case "notSubmitted":
-          return (
-            <Button
-              id="send-button"
-              value="Send"
-              color="#67E8F9"
-              variant="link"
-              onClick={formik.handleSubmit}
-              className="cursor-pointer flex flex-center text-xl text-center align-items justify-center m-auto hover:text-[#67E8F9] hover:scale-110 ease-in duration-100 uppercase"
-            >
-              Send Message
-              <AiOutlineMail size={29} className="ml-2" />
-            </Button>
-            // <button id='send-button' value="Send" className='cursor-pointer flex flex-center text-xl text-center align-items justify-center m-auto hover:text-[#67E8F9] hover:scale-110 ease-in duration-100 uppercase'>Send Message<AiOutlineMail  size={29} className='ml-2'/></button>
-          );
-        case "loading":
-          return (
-            <Button
-              id="send-button"
-              value="Send"
-              isLoading
-              loadingText="Sending"
-              color="#67E8F9"
-              variant="link"
-              className="cursor-default flex flex-center text-xl text-center align-items justify-center m-auto text-[#ffffff]/60 hover:scale-110 ease-in duration-100 uppercase"
-            >
-              Submit
-            </Button>
-            // <button id='send-button' value="Send" className='cursor-default flex flex-center text-xl text-center align-items justify-center m-auto text-[#ffffff]/60 hover:scale-110 ease-in duration-100 uppercase'>Sending...</button>
-          );
-        case "error":
-          return (
-            <button 
-              id='send-button' 
-              value="Send" 
-              className='cursor-pointer flex flex-center text-xl text-center align-items justify-center m-auto text-red-600 hover:scale-110 ease-in duration-100 uppercase'
-            >
-              Error
-              <TiTimesOutline  size={29} className='ml-2'/>
-            </button>
-          )
-        default:
-          return null;
+      case 'submitted':
+        return (
+          <Button
+            leftIcon={<CheckIcon />}
+            color="#60f073"
+            variant="none"
+            className="flex cursor-default flex-center text-xl text-center m-auto ease-in duration-100 "
+            size="lg"
+          >
+            Submitted
+          </Button>   
+        );
+      case 'notSubmitted':
+        return (
+          <Button
+            leftIcon={<EmailIcon />}
+            color="#ffffff"
+            variant="outline"
+            className="flex flex-center text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100 "
+            loadingText="Sending"
+            onClick={formik.handleSubmit}
+            size="lg"
+          >
+            Send Message
+          </Button>         
+        );
+      case 'loading':
+        return (
+          <Button
+            leftIcon={<EmailIcon />}
+            color="#ffffff"
+            variant="outline"
+            className="flex flex-center cursor-default text-xl text-center m-auto ease-in duration-100 "
+            isLoading
+            loadingText="Sending"
+            size="lg"
+          >
+            Send Message
+          </Button>
+        );
+      case 'error':
+        return (
+          <Button
+            leftIcon={<WarningIcon />}
+            color="red.300"
+            variant="outline"
+            className="flex flex-center text-xl text-center m-auto ease-in duration-100 "
+            onClick={formik.handleSubmit}
+            size="lg"
+          >
+            Error: Send Again
+          </Button>
+        );
+      default:
+        return null;
     }
   };
-  
-   
 
-  
+
   return (
     <div
       id="contact"
@@ -200,10 +196,15 @@ const Contact = () => {
                         }
                         className="flex flex-col"
                       >
-                        <FormLabel className="uppercase text-sm pt-4">
-                          <Text className="uppercase text-sm font-normal">
-                            Name
-                          </Text>
+                        <FormLabel className="pt-2">
+                          <div className="flex flex-row justify-start m-auto items-center">
+                            <Text className="uppercase text-sm font-normal mt-2">
+                              Name
+                            </Text>
+                            <FormErrorMessage className="ml-2 font-normal">
+                              *{formik.errors.user_name}
+                            </FormErrorMessage>
+                          </div>
                         </FormLabel>
                         <Input
                           className=""
@@ -212,14 +213,11 @@ const Contact = () => {
                           id="name_input"
                           focusBorderColor="#67E8F9"
                           variant="flushed"
-                          placeholder="Your Name (required)"
+                          placeholder="Your Name"
                           _placeholder={{ color: 'gray.100', opacity: 0.3 }}
                           errorBorderColor="red"
                           {...formik.getFieldProps('user_name')}
                         />
-                        <FormErrorMessage>
-                          {formik.errors.user_name}
-                        </FormErrorMessage>
                       </FormControl>
 
                       <FormControl
@@ -228,10 +226,15 @@ const Contact = () => {
                           formik.errors.user_phone && formik.touched.user_phone
                         }
                       >
-                        <FormLabel className="uppercase text-sm pt-4">
-                          <Text className="uppercase text-sm font-normal">
-                            Phone Number
-                          </Text>
+                        <FormLabel className="pt-2">
+                          <div className="flex flex-row justify-start m-auto items-center">
+                            <Text className="uppercase text-sm font-normal mt-2">
+                              Phone Number
+                            </Text>
+                            <FormErrorMessage className="ml-2 font-normal">
+                              *{formik.errors.user_phone}
+                            </FormErrorMessage>
+                          </div>
                         </FormLabel>
                         <Input
                           className=""
@@ -245,9 +248,6 @@ const Contact = () => {
                           focusBorderColor="#67E8F9"
                           {...formik.getFieldProps('user_phone')}
                         />
-                        <FormErrorMessage>
-                          {formik.errors.user_phone}
-                        </FormErrorMessage>
                       </FormControl>
                     </div>
 
@@ -257,10 +257,15 @@ const Contact = () => {
                       }
                       className="flex flex-col py-4"
                     >
-                      <FormLabel className="uppercase text-sm pt-4">
-                        <Text className="uppercase text-sm font-normal">
-                          Email
-                        </Text>
+                      <FormLabel className="pt-2">
+                        <div className="flex flex-row justify-start m-auto items-center">
+                          <Text className="uppercase text-sm font-normal mt-2">
+                            Email
+                          </Text>
+                          <FormErrorMessage className="ml-2 font-normal">
+                            *{formik.errors.user_email}
+                          </FormErrorMessage>
+                        </div>
                       </FormLabel>
                       <Input
                         className=""
@@ -270,13 +275,10 @@ const Contact = () => {
                         id="email_input"
                         errorBorderColor="red"
                         focusBorderColor="#67E8F9"
-                        placeholder="Your Email (required)"
+                        placeholder="Your Email"
                         _placeholder={{ color: 'gray.100', opacity: 0.3 }}
                         {...formik.getFieldProps('user_email')}
                       />
-                      <FormErrorMessage>
-                        {formik.errors.user_email}
-                      </FormErrorMessage>
                     </FormControl>
 
                     <FormControl
@@ -311,10 +313,15 @@ const Contact = () => {
                       }
                       className="flex flex-col pt-4"
                     >
-                      <FormLabel className="uppercase text-sm pt-4">
-                        <Text className="uppercase text-sm font-normal">
-                          Message
-                        </Text>
+                      <FormLabel className="pt-2">
+                        <div className="flex flex-row justify-start m-auto items-center">
+                          <Text className="uppercase text-sm font-normal mt-2">
+                            Message
+                          </Text>
+                          <FormErrorMessage className="ml-2 font-normal">
+                            *{formik.errors.message}
+                          </FormErrorMessage>
+                        </div>
                       </FormLabel>
                       <Textarea
                         className=""
@@ -324,13 +331,10 @@ const Contact = () => {
                         id="message_input"
                         errorBorderColor="red"
                         focusBorderColor="#67E8F9"
-                        placeholder="Message (required)"
+                        placeholder="Message"
                         _placeholder={{ color: 'gray.100', opacity: 0.3 }}
                         {...formik.getFieldProps('message')}
                       />
-                      <FormErrorMessage>
-                        {formik.errors.message}
-                      </FormErrorMessage>
                     </FormControl>
 
                     <div className="flex flex-row w-[95%] m-auto mt-6 mb-3 md:mb-0">
