@@ -3,6 +3,7 @@ import emporiumImg from '../assets/projects/emporium-full.png'
 import {RiRadioButtonFill} from 'react-icons/ri'
 import {SiCss3, SiExpress, SiAuth0, SiRedux, SiNodedotjs, SiReact, SiPostgresql} from 'react-icons/si'
 import {MdArrowBack} from 'react-icons/md'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const Emporium = () => {
   return (
@@ -92,11 +93,12 @@ const Emporium = () => {
       </div>
       <div className='flex flex-row' data-aos='fade-in' data-aos-anchor='#emporium'>
         <a href='https://emporium-shop.herokuapp.com/' target='_blank' rel='noreferrer noopener'>
-        <button className='text-lg lg:text-xl px-6 py-3 mt-2 mr-2 text-gray-800 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Demo</button>
+        <Button variant='outline' className='text-lg lg:text-xl px-6 py-3 mt-2 mr-2 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Demo</Button>
         </a>
         <a href='https://github.com/JPSCorreia/emporium-shop-frontend' target='_blank' rel='noreferrer noopener'>
-        <button className='text-lg lg:text-xl px-6 py-3 mt-2 ml-2 text-gray-800 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Code</button>
+        <Button colorScheme='white' variant='outline' className='text-lg lg:text-xl px-6 py-3 mt-2 ml-2  hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Code</Button>
         </a>
+
       </div>
     </div>
   </div>

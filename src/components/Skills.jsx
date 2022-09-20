@@ -14,7 +14,7 @@ const Skills = () => {
     //         <RotatingGlobe />
     //       </div>
     //     </div>
-      <div id='skills' className='w-[90%] m-auto md:h-screen p-2'>
+      <div id='skills' className='w-[90%] m-auto md:h-screen p-2 pt-0'>
         <div className='max-w-[1240px] flex flex-col mx-auto px-2 pt-20'>
         <p className='text-xl tracking-widest uppercase text-[#67E8F9]' data-aos='fade-right' data-aos-anchor='#skills'>Skills</p>
         <h2 className='pt-2' data-aos='fade-right' data-aos-anchor='#skills'>What I Can Do</h2>
@@ -25,7 +25,6 @@ const Skills = () => {
           </div>
           <div className='flex flex-row md:flex-col' >
           <div className='flex flex-col mr-1'>
-            
             <div className='py-2 text-start text-gray-200 flex flex-col md:flex-row mx-auto'>
               <span className='flex items-center mr-3 leading-loose tracking-widest text-md md:text-2xl mb-1'>
               <SiHtml5 className='mr-2' color='#dd4b25' size={32} />

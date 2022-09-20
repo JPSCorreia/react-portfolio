@@ -6,6 +6,7 @@ import {GrMail} from 'react-icons/gr'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { HashLink } from 'react-router-hash-link';
+import { Text } from '@chakra-ui/react'
 // import jcorreia from '../assets/jcorreia-fullstackdev-2.png';
 
 
@@ -72,10 +73,10 @@ function Navbar() {
               <li className='w-[100px] hover:shadow-custom pl-6 pr-6 ml-2 p-3 pt-[1.95rem] text-xl text-center hover:text-[#67E8F9] hover:scale-110 ease-in duration-100'><div className='flex flex-col flex-center'><FaGraduationCap className='flex-center m-auto'  size={32} /><span className='text-xs mt-1'>Skills</span></div></li>
             </HashLink>
             <HashLink to='/#projects'>
-              <li className='w-[100px] hover:shadow-custom pl-6 pr-6 ml-2 p-3 pt-[1.95rem] text-xl text-center hover:text-[#67E8F9] hover:scale-110 ease-in duration-100'><div className='flex flex-col flex-center'><FaEye className='flex-center m-auto'  size={32} /><span className='text-xs mt-1'>Projects</span></div></li>
+              <li className='w-[100px] hover:shadow-custom pl-6 pr-6 ml-2 p-3 pt-[1.95rem] text-xl text-center hover:text-[#67E8F9] hover:scale-110 ease-in duration-100'><div className='flex flex-col flex-center'><FaEye className='flex-center m-auto mr-2'  size={32} /><span className='text-xs mt-1 whitespace-nowrap'>Projects</span></div></li>
             </HashLink>
             <HashLink to='/#contact'>
-              <li className='w-[100px] hover:shadow-custom pl-6 pr-6 p-3 ml-2 pt-[1.95rem] text-xl text-center hover:text-[#67E8F9] hover:scale-110 ease-in duration-100'><div className='flex flex-col flex-center'><GrMail className='flex-center m-auto'  size={32} /><span className='text-xs mt-1'>Contact</span></div></li>
+              <li className='w-[100px] hover:shadow-custom pl-6 pr-6 p-3 ml-2 pt-[1.95rem] text-xl text-center hover:text-[#67E8F9] hover:scale-110 ease-in duration-100'><div className='flex flex-col flex-center'><GrMail className='flex-center m-auto mr-2'  size={32} /><span className='text-xs mt-1 whitespace-nowrap'>Contact</span></div></li>
             </HashLink>
           </ul>
           <div onClick={handleNav} className='lg:hidden mr-2 sm:mr-2 md:mr-4 cursor-pointer p-2 mt-6 hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>

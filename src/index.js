@@ -15,7 +15,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+      <ChakraProvider resetCSS={false} >
         <App />
+      </ChakraProvider>
     </Router>
   </React.StrictMode>
 );

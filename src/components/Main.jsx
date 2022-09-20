@@ -2,6 +2,7 @@
 import React from 'react'
 import {SiExpress, SiReact, SiPostgresql} from 'react-icons/si'
 import RotatingGlobe from './RotatingGlobe.jsx'
+import { Heading } from '@chakra-ui/react'
 
 const Main = () => {
 
