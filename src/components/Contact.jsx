@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import contact from '../assets/contact.jpeg'
-import {AiOutlineMail} from 'react-icons/ai'
-// import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
-// import {BsFillPersonLinesFill} from 'react-icons/bs'
-import {TiTickOutline, TiTimesOutline} from 'react-icons/ti'
+import contact from '../assets/contact.jpg'
 import { contactSchema } from '../validations/ContactValidation';
 import { useFormik } from 'formik';
 import { EmailIcon, CheckIcon, WarningIcon } from '@chakra-ui/icons';
@@ -23,6 +19,10 @@ import {
 const Contact = () => {
   const toast = useToast();
   const [submitted, setSubmitted] = useState('notSubmitted');
+  const [style, setStyle] = useState(
+    'w-full shadow-custom2 hover:shadow-[#67E8F9] shadow-[#ffffff] p-4 justify-center flex flex-col mx-auto'
+  );
+
 
   const formik = useFormik({
     initialValues: {
@@ -34,8 +34,6 @@ const Contact = () => {
     },
     validationSchema: contactSchema,
     onSubmit: (values, actions) => {
-      console.log(values);
-
       setSubmitted('loading');
       emailjs
         .send(
@@ -53,6 +51,10 @@ const Contact = () => {
               isClosable: true,
             });
             setSubmitted('submitted');
+            setStyle(
+              'w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto'
+            );
+            actions.resetForm();
           },
           (error) => {
             toast({
@@ -79,7 +81,7 @@ const Contact = () => {
             size="lg"
           >
             Submitted
-          </Button>   
+          </Button>
         );
       case 'notSubmitted':
         return (
@@ -93,7 +95,7 @@ const Contact = () => {
             size="lg"
           >
             Send Message
-          </Button>         
+          </Button>
         );
       case 'loading':
         return (
@@ -128,6 +130,8 @@ const Contact = () => {
   };
 
 
+  //TODO: make inputs unchangeable on submit, maybe change input style, change project display
+
   return (
     <div
       id="contact"
@@ -150,7 +154,7 @@ const Contact = () => {
           How To Get In Touch
         </h2>
         <div className="" data-aos="fade-in" data-aos-anchor="#contact">
-          <div className="w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto">
+          <div className={style}>
             <div className="lg:p-4 h-full ">
               <div className=" flex flex-row justify-between">
                 <div className="">
@@ -162,20 +166,6 @@ const Contact = () => {
                     Available for freelance or full-time positions.
                   </p>
                   <p>Contact me so we can talk.</p>
-                  {/* <div className='flex m-auto items-center justify-start py-1'>
-                    <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] ml-0 p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
-                      <FaLinkedinIn size={24}/>
-                    </div>
-                    <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
-                      <FaGithub size={24}/>
-                    </div>
-                    <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
-                      <AiOutlineMail size={24}/>
-                    </div>
-                    <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
-                      <BsFillPersonLinesFill size={24}/>
-                    </div>
-                  </div> */}
                 </div>
                 <div className="hidden lg:block w-[300px]">
                   <img
@@ -187,7 +177,6 @@ const Contact = () => {
               </div>
               <div>
                 <div className="col-span-3 w-full h-auto">
-                  {/* <form ref={form} onSubmit={sendEmail}> */}
                   <form onSubmit={formik.handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-8 w-full py-4">
                       <FormControl
@@ -202,7 +191,7 @@ const Contact = () => {
                               Name
                             </Text>
                             <FormErrorMessage className="ml-2 font-normal">
-                              *{formik.errors.user_name}
+                              {formik.errors.user_name}
                             </FormErrorMessage>
                           </div>
                         </FormLabel>
@@ -232,7 +221,7 @@ const Contact = () => {
                               Phone Number
                             </Text>
                             <FormErrorMessage className="ml-2 font-normal">
-                              *{formik.errors.user_phone}
+                              {formik.errors.user_phone}
                             </FormErrorMessage>
                           </div>
                         </FormLabel>
@@ -263,7 +252,7 @@ const Contact = () => {
                             Email
                           </Text>
                           <FormErrorMessage className="ml-2 font-normal">
-                            *{formik.errors.user_email}
+                            {formik.errors.user_email}
                           </FormErrorMessage>
                         </div>
                       </FormLabel>
@@ -319,7 +308,7 @@ const Contact = () => {
                             Message
                           </Text>
                           <FormErrorMessage className="ml-2 font-normal">
-                            *{formik.errors.message}
+                            {formik.errors.message}
                           </FormErrorMessage>
                         </div>
                       </FormLabel>

@@ -6,11 +6,11 @@ import { NavLink } from 'react-router-dom';
 
 const Projects = () => {
   return (
-    <div id='projects' className='w-[90%] m-auto h-screen pt-20 '>
+    <div id='projects' className='w-[90%] m-auto h-screen mt-48'>
       <div className='max-w-[1240px] flex flex-col justify-center h-full mx-auto px-2 py-16'>
         <p className='text-xl tracking-widest uppercase text-[#67E8F9]' data-aos='fade-right' data-aos-anchor='#projects'>Projects</p>
         <h2 className='py-2 mb-10' data-aos='fade-right' data-aos-anchor='#projects'>What I have Built</h2>
-        <div className='grid md:grid-cols-2 gap-8' data-aos='fade-in' data-aos-anchor='#projects'>
+        <div className='grid md:grid-cols-2 gap-20' data-aos='fade-in' data-aos-anchor='#projects'>
           <NavLink
             to={'/emporium'}
           >

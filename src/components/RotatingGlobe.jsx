@@ -36,7 +36,7 @@ function RotatingGlobe() {
       data-aos='fade-in' 
       data-aos-mirror='false' 
       data-aos-delay='200' 
-      data-aos-duration='2000'
+      data-aos-duration='1500'
     >
       <group>
       <ambientLight />
