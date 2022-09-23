@@ -5,16 +5,23 @@ import RotatingGlobe from './RotatingGlobe.jsx'
 const Skills = () => {
 
   return (
-    <div id="skills" className="w-[90%] m-auto md:h-screen p-2 md:pt-28 mt-32 pt-0">
+    <div
+      id="skills"
+      className="w-[90%] m-auto md:h-screen p-2 md:pt-16 mt-32 pt-0"
+    >
       <div className="max-w-[1240px] flex flex-col mx-auto px-2 pt-20">
         <p
-          className="text-xl tracking-widest uppercase text-[#67E8F9]"
+          className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top"
           data-aos="fade-right"
           data-aos-anchor="#skills"
         >
           Skills
         </p>
-        <h2 className="pt-2" data-aos="fade-right" data-aos-anchor="#skills">
+        <h2
+          className="pt-2 header-text-bottom"
+          data-aos="fade-right"
+          data-aos-anchor="#skills"
+        >
           What I Can Do
         </h2>
       </div>

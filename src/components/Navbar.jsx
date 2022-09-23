@@ -8,34 +8,37 @@ import 'aos/dist/aos.css';
 import { HashLink } from 'react-router-hash-link';
 
 function Navbar() {
-
   useEffect(() => {
     Aos.init({
       duration: 400,
       easing: 'ease-in',
       mirror: true,
-
     });
-  }, [])
+  }, []);
 
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(false);
 
   const handleNav = () => {
-    setNav(!nav)
-  }
+    setNav(!nav);
+  };
+
+  //bg-gradient-to-r from-[#0891B2] to-[#67E8F9]
 
   return (
     <>
-      <div id='navbar' className="fixed w-full h-20 bg-[#121212]/70 shadow-[#121212] z-[9999]"></div>
+      <div
+        id="navbar"
+        className="fixed w-full h-20 bg-[#121212]/70 shadow-[#121212] z-[9999] "
+      ></div>
       <div className="fixed w-full h-14 z-[9999]">
         <div className="flex justify-end items-center h-full w-full">
-          <div data-aos="fade-in" data-aos-once >
+          <div data-aos="fade-in" data-aos-once>
             <ul className="hidden lg:flex uppercase mr-[7px] justify-right">
               <HashLink to="/#">
                 <li className="w-[100px] hover:shadow-custom pl-6 pr-6 ml-2 text-center p-3 pt-[1.95rem] text-xl hover:text-[#67E8F9] hover:scale-110 ease-in duration-100">
                   <div className="flex flex-col flex-center">
                     <FaHome className="flex-center m-auto" size={32} />
-                    <span className="text-xs mt-1">Home</span>
+                    <span className="text-xs mt-1 ">Home</span>
                   </div>
                 </li>
               </HashLink>

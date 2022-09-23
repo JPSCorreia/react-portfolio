@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center mb-8 bg-transparent"
+      className="flex flex-col items-center justify-center bg-transparent"
       id="scroller"
     >
       <HashLink to="#">

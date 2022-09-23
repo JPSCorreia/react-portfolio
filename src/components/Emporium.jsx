@@ -4,6 +4,7 @@ import { SiExpress, SiAuth0, SiRedux, SiNodedotjs, SiReact, SiPostgresql} from '
 import { Button } from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa';
 import { IoPlay } from 'react-icons/io5'
+import { HashLink } from 'react-router-hash-link';
 
 const Emporium = () => {
   return (
@@ -18,15 +19,17 @@ const Emporium = () => {
           data-aos-duration="1000"
         />
         <div className="absolute left-0 w-full top-[20] h-[20vh] lg:h-[30vh] bg-[#121212]/70 z-10"></div>
-        <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <p
-            className="text-xl tracking-widest uppercase text-[#67E8F9]"
-            data-aos="fade-right"
-            data-aos-anchor="#emporium"
-          >
-            Project
-          </p>
-        </div>
+        <HashLink to="/#projects">
+          <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <p
+              className="text-xl tracking-widest uppercase text-[#67E8F9] cursor-pointer hover:underline underline-offset-4 "
+              data-aos="fade-right"
+              data-aos-anchor="#emporium"
+            >
+              Projects
+            </p>
+          </div>
+        </HashLink>
       </div>
       <div className="max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-20">
         <div className="col-span-4">

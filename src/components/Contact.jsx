@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import contact from '../assets/contact.jpg'
+// import contact from '../assets/contact.jpg'
 import { contactSchema } from '../validations/ContactValidation';
 import { useFormik } from 'formik';
 import { EmailIcon, CheckIcon, WarningIcon } from '@chakra-ui/icons';
@@ -19,10 +19,8 @@ import {
 const Contact = () => {
   const toast = useToast();
   const [submitted, setSubmitted] = useState('notSubmitted');
-  const [style, setStyle] = useState(
-    'w-full shadow-custom2 hover:shadow-[#67E8F9] shadow-[#ffffff] p-4 justify-center flex flex-col mx-auto'
-  );
-
+  const [finish, setFinish] = useState(false);
+  const [focused, setFocused] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -51,10 +49,11 @@ const Contact = () => {
               isClosable: true,
             });
             setSubmitted('submitted');
-            setStyle(
-              'w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto'
-            );
-            actions.resetForm();
+            setFinish(true);
+            // setStyle(
+            //   'w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto'
+            // );
+            // actions.resetForm();
           },
           (error) => {
             toast({
@@ -129,8 +128,12 @@ const Contact = () => {
     }
   };
 
+  const styleFocused = finish
+    ? 'w-full shadow-custom2 shadow-[#60f073] p-4 justify-center flex flex-col mx-auto'
+    : 'w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto';
 
-  //TODO: make inputs unchangeable on submit, maybe change input style, change project display
+  const styleUnfocused =
+    'w-full shadow-custom2 shadow-[#ffffff] p-4 justify-center flex flex-col mx-auto';
 
   return (
     <div
@@ -140,45 +143,27 @@ const Contact = () => {
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full flex flex-col justify-center h-full">
         <p
           id="contact-start"
-          className="text-xl tracking-widest uppercase text-[#67E8F9]"
+          className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top"
           data-aos="fade-right"
           data-aos-anchor="#contact"
         >
           Contact
         </p>
         <h2
-          className="py-4 mb-4"
+          className="py-4 mb-4 header-text-bottom"
           data-aos="fade-right"
           data-aos-anchor="#contact"
         >
-          How To Get In Touch
+          How To Get in Touch
         </h2>
         <div className="" data-aos="fade-in" data-aos-anchor="#contact">
-          <div className={style}>
-            <div className="lg:p-4 h-full ">
-              <div className=" flex flex-row justify-between">
-                <div className="">
-                  <h2 className="pb-2" id="contact-name">
-                    João Correia
-                  </h2>
-                  <p>Full Stack Developer</p>
-                  <p className="mt-8">
-                    Available for freelance or full-time positions.
-                  </p>
-                  <p>Contact me so we can talk.</p>
-                </div>
-                <div className="hidden lg:block w-[300px]">
-                  <img
-                    className="animated-image rounded-xl hover:scale-105 ease-in duration-300"
-                    src={contact}
-                    alt=""
-                  />
-                </div>
-              </div>
+          <div className={finish || focused ? styleFocused : styleUnfocused}>
+            <div className="lg:p-2 h-full ">
               <div>
                 <div className="col-span-3 w-full h-auto">
+                  <div>{focused}</div>
                   <form onSubmit={formik.handleSubmit}>
-                    <div className="grid md:grid-cols-2 gap-8 w-full py-4">
+                    <div className="grid md:grid-cols-2 gap-8 w-full py-2">
                       <FormControl
                         isInvalid={
                           formik.errors.user_name && formik.touched.user_name
@@ -197,6 +182,10 @@ const Contact = () => {
                         </FormLabel>
                         <Input
                           className=""
+                          isDisabled={finish}
+                          onFocus={(e) => {
+                            setFocused(true);
+                          }}
                           type="text"
                           name="user_name"
                           id="name_input"
@@ -205,10 +194,15 @@ const Contact = () => {
                           placeholder="Your Name"
                           _placeholder={{ color: 'gray.100', opacity: 0.3 }}
                           errorBorderColor="red"
-                          {...formik.getFieldProps('user_name')}
+                          onChange={formik.handleChange}
+                          onBlur={(e) => {
+                            formik.handleBlur(e);
+                            setFocused(false);
+                          }}
+                          value={formik.values.user_name}
+                          // {...formik.getFieldProps('user_name')}
                         />
                       </FormControl>
-
                       <FormControl
                         className="flex flex-col"
                         isInvalid={
@@ -227,6 +221,10 @@ const Contact = () => {
                         </FormLabel>
                         <Input
                           className=""
+                          isDisabled={finish}
+                          onFocus={(e) => {
+                            setFocused(true);
+                          }}
                           type="text"
                           name="user_phone"
                           id="phone_input"
@@ -235,7 +233,13 @@ const Contact = () => {
                           _placeholder={{ color: 'gray.100', opacity: 0.3 }}
                           errorBorderColor="red"
                           focusBorderColor="#67E8F9"
-                          {...formik.getFieldProps('user_phone')}
+                          onChange={formik.handleChange}
+                          onBlur={(e) => {
+                            formik.handleBlur(e);
+                            setFocused(false);
+                          }}
+                          value={formik.values.user_phone}
+                          // {...formik.getFieldProps('user_phone')}
                         />
                       </FormControl>
                     </div>
@@ -258,6 +262,10 @@ const Contact = () => {
                       </FormLabel>
                       <Input
                         className=""
+                        isDisabled={finish}
+                        onFocus={(e) => {
+                          setFocused(true);
+                        }}
                         type="email"
                         variant="flushed"
                         name="user_email"
@@ -266,7 +274,13 @@ const Contact = () => {
                         focusBorderColor="#67E8F9"
                         placeholder="Your Email"
                         _placeholder={{ color: 'gray.100', opacity: 0.3 }}
-                        {...formik.getFieldProps('user_email')}
+                        onChange={formik.handleChange}
+                        onBlur={(e) => {
+                          formik.handleBlur(e);
+                          setFocused(false);
+                        }}
+                        value={formik.values.user_email}
+                        // {...formik.getFieldProps('user_email')}
                       />
                     </FormControl>
 
@@ -284,6 +298,10 @@ const Contact = () => {
                       </FormLabel>
                       <Input
                         className=""
+                        isDisabled={finish}
+                        onFocus={(e) => {
+                          setFocused(true);
+                        }}
                         type="text"
                         name="user_subject"
                         id="subject_input"
@@ -292,7 +310,13 @@ const Contact = () => {
                         focusBorderColor="#67E8F9"
                         placeholder="Subject"
                         _placeholder={{ color: 'gray.100', opacity: 0.3 }}
-                        {...formik.getFieldProps('user_subject')}
+                        onChange={formik.handleChange}
+                        onBlur={(e) => {
+                          formik.handleBlur(e);
+                          setFocused(false);
+                        }}
+                        value={formik.values.user_subject}
+                        // {...formik.getFieldProps('user_subject')}
                       />
                     </FormControl>
 
@@ -313,6 +337,10 @@ const Contact = () => {
                         </div>
                       </FormLabel>
                       <Textarea
+                        isDisabled={finish}
+                        onFocus={(e) => {
+                          setFocused(true);
+                        }}
                         className=""
                         rows="6"
                         name="message"
@@ -322,7 +350,13 @@ const Contact = () => {
                         focusBorderColor="#67E8F9"
                         placeholder="Message"
                         _placeholder={{ color: 'gray.100', opacity: 0.3 }}
-                        {...formik.getFieldProps('message')}
+                        onChange={formik.handleChange}
+                        onBlur={(e) => {
+                          formik.handleBlur(e);
+                          setFocused(false);
+                        }}
+                        value={formik.values.message}
+                        // {...formik.getFieldProps('message')}
                       />
                     </FormControl>
 

@@ -6,6 +6,7 @@ import {DiSass} from 'react-icons/di'
 import { Button } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 import { IoPlay } from 'react-icons/io5';
+import { HashLink } from 'react-router-hash-link';
 
 const TLDReddit = () => {
   return (
@@ -20,20 +21,22 @@ const TLDReddit = () => {
           data-aos-duration="1000"
         />
         <div className="absolute left-0 w-full top-[20] h-[20vh] lg:h-[30vh] bg-[#121212]/70 z-10"></div>
-        <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <p
-            className="text-xl tracking-widest uppercase text-[#67E8F9]"
-            data-aos="fade-right"
-            data-aos-anchor="#tldreddit"
-          >
-            Project
-          </p>
-        </div>
+        <HashLink to="/#projects">
+          <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <p
+              className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top"
+              data-aos="fade-right"
+              data-aos-anchor="#tldreddit"
+            >
+              Projects
+            </p>
+          </div>
+        </HashLink>
       </div>
       <div className="max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-20">
         <div className="col-span-4 ">
           <h2
-            className="py-2 mb-4"
+            className="py-2 mb-4 header-text-bottom"
             data-aos="fade-right"
             data-aos-anchor="#tldreddit"
           >

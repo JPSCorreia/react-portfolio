@@ -16,18 +16,18 @@ const About = () => {
         data-aos-anchor="#about"
       >
         <div className="flex flex-col ">
-          <p className="uppercase text-xl tracking-widest text-[#67E8F9]">
+          <p className="uppercase text-xl tracking-widest text-[#67E8F9] header-text-top">
             About Me
           </p>
-          <Heading
+          <h2
             as="h2"
-            className="pt-2 text-gray-200 font-bold"
-            data-aos="fade-right"
-            data-aos-delay="0"
-            data-aos-anchor="#about"
+            className="pt-2 text-gray-200 font-bold header-text-bottom tracking-wide"
+            // data-aos="fade-right"
+            // data-aos-delay="0"
+            // data-aos-anchor="#about"
           >
             Who I am
-          </Heading>
+          </h2>
           <div className="flex flex-row">
             <div
               className="pt-10"
