@@ -3,10 +3,12 @@ import React from 'react'
 import emporiumImg from '../assets/projects/tldreddit-full.png'
 import {SiJest,  SiReactrouter, SiRedux, SiReact} from 'react-icons/si'
 import {DiSass} from 'react-icons/di'
-import { Button } from '@chakra-ui/react';
+import { Button, Box } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 import { IoPlay } from 'react-icons/io5';
 import { HashLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 
 const TLDReddit = () => {
   return (
@@ -24,25 +26,49 @@ const TLDReddit = () => {
         <HashLink to="/#projects">
           <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
             <p
-              className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top"
-              data-aos="fade-right"
-              data-aos-anchor="#tldreddit"
+              className="text-xl tracking-widest uppercase header-text-top text-[#67E8F9] hover:underline underline-offset-4 "
+              // data-aos="fade-right"
+              // data-aos-anchor="#tldreddit"
+              // data-aos-duration="400"
             >
               Projects
             </p>
           </div>
         </HashLink>
       </div>
+      <NavLink to={'/emporium'}>
+        <div className="flex-row flex-start justify-start hidden 2xl:flex absolute top-[71.2%] left-[5%] ">
+          <ChevronLeftIcon
+            className="hover:text-[#67E8F9] hover:scale-110 ease-in duration-100"
+            w={12}
+            h={12}
+          />
+        </div>
+      </NavLink>
+      <NavLink to={'/emporium'}>
+        <div className="flex-row flex-start justify-start hidden 2xl:flex absolute top-[71.2%] left-[92%] ">
+          <ChevronRightIcon
+            className="hover:text-[#67E8F9] hover:scale-110 ease-in duration-100"
+            w={12}
+            h={12}
+          />
+        </div>
+      </NavLink>
       <div className="max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-20">
         <div className="col-span-4 ">
           <h2
-            className="py-2 mb-4 header-text-bottom"
+            className="py-2 mb-4"
             data-aos="fade-right"
             data-aos-anchor="#tldreddit"
+            data-aos-duration="400"
           >
             TLDReddit
           </h2>
-          <p data-aos="fade-right" data-aos-anchor="#tldreddit">
+          <p
+            data-aos="fade-right"
+            data-aos-anchor="#tldreddit"
+            data-aos-duration="400"
+          >
             TLDReddit is an alternative way to browse reddit as a Single Page
             Application. Users are able browse any subreddit they want, they can
             expand any thread and comment they want and preview all types of
@@ -50,7 +76,11 @@ const TLDReddit = () => {
             subreddit and comment page by writting in the browser's address bar.
           </p>
           <br />
-          <p data-aos="fade-right" data-aos-anchor="#tldreddit">
+          <p
+            data-aos="fade-right"
+            data-aos-anchor="#tldreddit"
+            data-aos-duration="400"
+          >
             This application was built using React, bootstrapped with
             create-react-app and is hosted on netlify. Data handling was done by
             fetching data using reddit's API, routing was handled by
@@ -63,6 +93,7 @@ const TLDReddit = () => {
           className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 pl-8 pb-2 pr-4"
           data-aos="fade-left"
           data-aos-anchor="#tldreddit"
+          data-aos-duration="400"
         >
           <div className="p-2">
             <p className="text-center text-xl font-bold pb-2">Technologies</p>
@@ -112,8 +143,9 @@ const TLDReddit = () => {
         </div>
         <div
           className="flex flex-row"
-          data-aos="fade-in"
+          data-aos="fade-up"
           data-aos-anchor="#tldreddit"
+          data-aos-duration="400"
         >
           <a
             href="https://serene-sinoussi-2933f8.netlify.app/"
@@ -124,7 +156,7 @@ const TLDReddit = () => {
               leftIcon={<IoPlay />}
               color="#ffffff"
               variant="outline"
-              className="flex flex-center text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100 "
+              className="flex flex-center text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100"
               size="lg"
             >
               Demo
@@ -146,6 +178,17 @@ const TLDReddit = () => {
             </Button>
           </a>
         </div>
+        {/* <NavLink to={'/emporium'}>
+          <Button
+            leftIcon={<FaGithub />}
+            color="#ffffff"
+            variant="outline"
+            className="flex flex-center ml-4 text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100"
+            size="lg"
+          >
+            Next
+          </Button>
+        </NavLink> */}
       </div>
     </div>
   );

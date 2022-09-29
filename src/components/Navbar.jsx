@@ -10,8 +10,9 @@ import { HashLink } from 'react-router-hash-link';
 function Navbar() {
   useEffect(() => {
     Aos.init({
-      duration: 400,
+      // delay: 100,
       easing: 'ease-in',
+      duration: 0,
       mirror: true,
     });
   }, []);
@@ -32,7 +33,7 @@ function Navbar() {
       ></div>
       <div className="fixed w-full h-14 z-[9999]">
         <div className="flex justify-end items-center h-full w-full">
-          <div data-aos="fade-in" data-aos-once>
+          <div data-aos="fade-in" data-aos-once data-aos-duration="400">
             <ul className="hidden lg:flex uppercase mr-[7px] justify-right">
               <HashLink to="/#">
                 <li className="w-[100px] hover:shadow-custom pl-6 pr-6 ml-2 text-center p-3 pt-[1.95rem] text-xl hover:text-[#67E8F9] hover:scale-110 ease-in duration-100">
@@ -81,7 +82,7 @@ function Navbar() {
             </ul>
             <div
               onClick={handleNav}
-              className="lg:hidden mr-2 sm:mr-2 md:mr-4 cursor-pointer p-2 mt-6 hover:scale-110 hover:text-[#67E8F9] ease-in duration-100"
+              className="lg:hidden mr-1.5 sm:mr-2 md:mr-4 cursor-pointer p-2 mt-6 hover:scale-110 hover:text-[#67E8F9] ease-in duration-100"
             >
               {nav ? (
                 <AiOutlineClose className="ease-in duration-200" size={32} />
@@ -95,7 +96,7 @@ function Navbar() {
           <div
             className={
               nav
-                ? 'p-0 shadow-sm lg:hidden fixed h-screen right-0 top-20 sidebar sm:w-20 md:w-20 lg:w-20 bg-[#121212] ease-in duration-200 bg-[#121212]/70'
+                ? 'p-0 shadow-sm lg:hidden fixed h-screen right-0 top-20 sidebar sm:w-20 md:w-20 lg:w-20 ease-in duration-200 bg-[#121212]/70'
                 : 'p-0 shadow-sm shadow-[#67E8F9] fixed h-screen right-[-50%] top-20 sidebar ease-in duration-200 bg-[#121212]/70'
             }
           >

@@ -13,12 +13,17 @@ const Footer = () => {
       id="scroller"
     >
       <HashLink to="#">
-        <div className="p-6 m-1 mt-16 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100">
-          <HiOutlineChevronDoubleUp size={30} />
+        <div
+          className="p-6 m-1 mt-2 md:mt-16 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100"
+          data-aos="fade-up"
+          data-aos-anchor="#scroller"
+          data-aos-duration="100"
+        >
+          <HiOutlineChevronDoubleUp size={48} />
         </div>
       </HashLink>
       <div className="flex justify-start py-1 items-center mt-4">
-        <p className="p-2 m-4 ">© 2022 João Correia</p>
+        <p className="p-2 m-2 md:m-4 text-sm">© 2022 João Correia</p>
         <a
           href="https://github.com/JPSCorreia"
           target="_blank"

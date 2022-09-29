@@ -4,7 +4,7 @@
 @layer base {
 
   body {
-    @apply bg-[#121212] text-white tracking-wide 
+    @apply bg-[#121212] text-[#E5E7EB] tracking-wide 
   
   }
 
@@ -13,7 +13,7 @@
   }
 
   #root {
-    @apply bg-[#121212]
+    @apply bg-[#949494] text-[#E5E7EB]
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -29,7 +29,7 @@
   }
 
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer 
   }
 
 }
@@ -76,6 +76,20 @@ body {
 
 .header-text-top {
   font-weight: 300;
+  font-family: ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 .header-text-bottom {
@@ -124,34 +138,44 @@ textarea:focus::placeholder {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .orbit-controls {
   display: none;
 }
 
 
 
+@media (min-width:280px) {
+  /* smaller phones */
+  .rotating-globe {
+    width: 100vw;
+    height: 40vh;
+  }
 
-@media (min-width:280px)  { 
+  .orbit-controls {
+    display: none;
+  }
+}
+
+
+@media (min-width:380px)  { 
   /* smartphones, iPhone, portrait 480x320 phones */ 
   .rotating-globe {
     width: 100vw;
-    height: 58vh;
+    height: 38vh;
   }
+  .orbit-controls {
+    display: none;
+  }
+}
+
+@media (min-width:1240px) {
+
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .rotating-globe {
+    width: 100vw;
+    height: 60vh;
+  }
+
   .orbit-controls {
     display: none;
   }

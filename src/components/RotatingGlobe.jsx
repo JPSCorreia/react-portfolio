@@ -22,8 +22,6 @@ function RotatingGlobe() {
   return (
     <Canvas 
       className='ball'
-      width='375px'
-      height='820px'
       id='#ball-place'
       gl={
         { 
@@ -32,7 +30,7 @@ function RotatingGlobe() {
         }
       } 
       
-      camera={{ position: [0, 50, 125], fov: 75 }}
+      camera={{ position: [0, 50, 125], fov: 57 }}
       data-aos='fade-in' 
       data-aos-mirror='false' 
       data-aos-delay='200' 
@@ -47,14 +45,14 @@ function RotatingGlobe() {
       <directionalLight color={color2} position={[1, 0, 0]} intensity={1.25}/>
       <directionalLight color={color2} position={[-1, 0, 0]} intensity={1.25} />
       <RotatingGlobeMesh  /> 
-      <Sprite url={reactImg} position={[0, 0, 72.5]} color='#00ccff' />
-      <Sprite url={htmlImg} position={[-51, 0, 51]} color='#dd4b25' />
-      <Sprite url={cssImg} position={[-72.5, 0, 0]} color='#2762e9' />
-      <Sprite url={javascriptImg} position={[-51, 0, -51]} color='#efd81f' />
-      <Sprite url={nodeImg} position={[0, 0, -72.5]} color='#43853d' />
-      <Sprite url={expressImg} position={[51, 0, -51]} color='#ffffff' />
-      <Sprite url={postgresqlImg} position={[72.5, 0, 0]} color='#31648d' />
-      <Sprite url={reduxImg} position={[51, 0, 51]} color='#764abc'/>
+      <Sprite name='React.js' url={reactImg} position={[0, 0, 72.5]} color='#00ccff' />
+      <Sprite name='HTML5' url={htmlImg} position={[-51, 0, 51]} color='#dd4b25' />
+      <Sprite name='CSS3' url={cssImg} position={[-72.5, 0, 0]} color='#2762e9' />
+      <Sprite name='Javascript' url={javascriptImg} position={[-51, 0, -51]} color='#efd81f' />
+      <Sprite name='Node.js' url={nodeImg} position={[0, 0, -72.5]} color='#43853d' />
+      <Sprite name='Express.js' url={expressImg} position={[51, 0, -51]} color='#ffffff' />
+      <Sprite name='PostgreSQL' url={postgresqlImg} position={[72.5, 0, 0]} color='#31648d' />
+      <Sprite name='Redux' url={reduxImg} position={[51, 0, 51]} color='#764abc'/>
       {
         isTabletOrMobile? '' : <OrbitControls className='orbit-controls' enablePan={false} enableZoom={false} />
       }

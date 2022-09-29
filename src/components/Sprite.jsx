@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react';
 import { useFrame, useLoader } from '@react-three/fiber'
 import { TextureLoader } from "three";
 
-const Sprite = ({url, position, color, ...props}) => {
+const Sprite = ({name, url, position, color, ...props}) => {
 
   // This reference gives us direct access to the THREE.Mesh object
   const sprites = useRef()
@@ -10,26 +10,36 @@ const Sprite = ({url, position, color, ...props}) => {
     (sprites.current.rotation.y += 0.0022)
   })
 
+  const [opacity, setOpacity] = useState(0.5);
   const texture = useLoader(TextureLoader, url)
+  const [hovered, setHovered] = useState(false);
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto';
+  }, [hovered]);
   
   return (
     <group ref={sprites}>
-      <sprite scale={[20, 20, 20]} position={position} >
-        <spriteMaterial 
-          attach='material' 
-          gl={
-            { 
-              alpha:true, 
-              antialias:true,
-            }
-          } 
-          map={texture}  
-          fog={false} 
-          opacity={0.85}
+      <sprite
+        scale={[20, 20, 20]}
+        position={position}
+        onPointerEnter={(e) => setOpacity(1)}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => {setHovered(false); setOpacity(0.6)}}
+      >
+        <spriteMaterial
+          attach="material"
+          gl={{
+            alpha: true,
+            antialias: true,
+          }}
+          map={texture}
+          fog={false}
+          opacity={opacity}
         />
       </sprite>
     </group>
-  )
+  );
 }
 
 export default Sprite

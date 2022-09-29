@@ -86,7 +86,7 @@ const Contact = () => {
         return (
           <Button
             leftIcon={<EmailIcon />}
-            color="#ffffff"
+            color="#E5E7EB"
             variant="outline"
             className="flex flex-center text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100 "
             loadingText="Sending"
@@ -100,7 +100,7 @@ const Contact = () => {
         return (
           <Button
             leftIcon={<EmailIcon />}
-            color="#ffffff"
+            color="#E5E7EB"
             variant="outline"
             className="flex flex-center cursor-default text-xl text-center m-auto ease-in duration-100 "
             isLoading
@@ -138,25 +138,32 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-[90%] m-auto md:h-screen pt-4 mt-32 mb-16 lg:mb-16 xl:mb-16"
+      className="w-[90%] m-auto md:h-screen " // pt-4 mt-32 mb-16 lg:mb-16 xl:mb-16
     >
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full flex flex-col justify-center h-full">
+      <div className="max-w-[1240px] m-auto md:py-16 w-full flex flex-col justify-center h-full">
         <p
           id="contact-start"
           className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top"
           data-aos="fade-right"
           data-aos-anchor="#contact"
+          data-aos-duration="400"
         >
           Contact
         </p>
         <h2
-          className="py-4 mb-4 header-text-bottom"
+          className="py-2 mb-10 header-text-bottom"
           data-aos="fade-right"
           data-aos-anchor="#contact"
+          data-aos-duration="400"
         >
           How To Get in Touch
         </h2>
-        <div className="" data-aos="fade-in" data-aos-anchor="#contact">
+        <div
+          className=""
+          data-aos="fade-in"
+          data-aos-anchor="#contact"
+          data-aos-duration="400"
+        >
           <div className={finish || focused ? styleFocused : styleUnfocused}>
             <div className="lg:p-2 h-full ">
               <div>

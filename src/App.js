@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-// import Particle from "./components/Particle";
 import Home from "./components/Home";
 import Emporium from "./components/Emporium";
 import TLDReddit from "./components/TLDReddit";
@@ -162,7 +161,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </>
-      ) : (
+       ) : (
         <Loader />
       )}
     </>

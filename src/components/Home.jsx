@@ -9,15 +9,19 @@ import Footer from './Footer';
 
 const Home = () => {
   return (
-    <main className='maincontainer'>
-      <Main  />
+    <main className="maincontainer">
+      <Main />
+      <div className="h-[5vh]"></div>
       <About />
+      <div className="h-[5vh]"></div>
       <Skills />
+      <div className="h-[5vh]"></div>
       <Projects />
+      <div className="h-[5vh]"></div>
       <Contact />
       <Footer />
     </main>
-  )
+  );
 }
 
 export default Home
