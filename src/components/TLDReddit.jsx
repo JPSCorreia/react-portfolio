@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import emporiumImg from '../assets/projects/tldreddit-full.png'
+import tldrImg from '../assets/projects/tldreddit-full.png'
 import {SiJest,  SiReactrouter, SiRedux, SiReact} from 'react-icons/si'
 import {DiSass} from 'react-icons/di'
 import { Button, Box } from '@chakra-ui/react';
@@ -16,7 +16,7 @@ const TLDReddit = () => {
       <div className="w-screen h-[20vh] lg:h-[30vh] relative top-20 shadow-lg shadow-[#67E8F9] rounded-xl">
         <img
           className="absolute left-0 h-[20vh] lg:h-[30vh] w-[100%] z-10 object-cover"
-          src={emporiumImg}
+          src={tldrImg}
           alt="/"
           data-aos="fade-in"
           data-aos-once
@@ -96,7 +96,7 @@ const TLDReddit = () => {
           data-aos-duration="400"
         >
           <div className="p-2">
-            <p className="text-center text-xl font-bold pb-2">Technologies</p>
+            <p className="text-start text-xl font-bold pb-2">Technologies</p>
             <div>
               <div className="flex flex-row flex-start justify-start">
                 <div className="flex items-center">

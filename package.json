@@ -26,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-loaders": "^3.0.1",
+    "react-moving-text": "^0.0.7",
     "react-responsive": "^9.0.0-beta.10",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",

@@ -3,12 +3,12 @@ import { Button, ButtonGroup } from '@chakra-ui/react';
 
 const ProjectItem = (props) => {
   return (
-    <div className=" group ">
-      <p className="text-2xl tracking-widest uppercase mb-4 text-center group-hover:text-[#67E8F9]">
+    <div className="group project-item w-[95%] mx-auto">
+      {/* <p className="text-2xl tracking-widest uppercase mb-4 text-center group-hover:text-[#67E8F9]">
         {props.title}
-      </p>
+      </p> */}
       {/* hover:bg-gradient-to-r from-[#0891B2]/80 to-[#67E8F9]/80 */}
-      <div className="relative flex items-center justify-center cursor-pointer h-auto w-full shadow-custom3 group-hover:bg-gradient-to-r from-[#0891B2] to-[#67E8F9] group-hover:shadow-[#67E8F9] shadow-[#ffffff] p-3 md:p-4">
+      <div className="relative flex items-center justify-center cursor-pointer h-auto w-full shadow-custom3 group-hover:bg-gradient-to-r from-[#0891B2] to-[#67E8F9] group-hover:shadow-[#67E8F9] shadow-[#ffffff] p-3 py-6 project-item-container">
         <>
           <img
             className=" group-hover:opacity-80 "

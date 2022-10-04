@@ -7,7 +7,7 @@ const Sprite = ({name, url, position, color, ...props}) => {
   // This reference gives us direct access to the THREE.Mesh object
   const sprites = useRef()
   useFrame((state, delta) => {
-    (sprites.current.rotation.y += 0.0022)
+    (sprites.current.rotation.y += 0.0011)
   })
 
   const [opacity, setOpacity] = useState(0.5);

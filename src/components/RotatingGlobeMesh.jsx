@@ -13,7 +13,7 @@ function RotatingGlobeMesh(props) {
   const color2 = new THREE.Color("#22D3F8");
 
   useFrame((state, delta) => {
-    (mesh.current.rotation.y += 0.0025)
+    (mesh.current.rotation.y += 0.00125)
   })
 
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });

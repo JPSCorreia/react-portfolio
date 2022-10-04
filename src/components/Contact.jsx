@@ -21,6 +21,11 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState('notSubmitted');
   const [finish, setFinish] = useState(false);
   const [focused, setFocused] = useState(false);
+  const styleFocused = finish
+    ? 'w-full shadow-custom2 shadow-[#60f073] p-4 justify-center flex flex-col mx-auto'
+    : 'w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto';
+  const styleUnfocused =
+    'w-full shadow-custom2 shadow-[#ffffff] p-4 justify-center flex flex-col mx-auto';
 
   const formik = useFormik({
     initialValues: {
@@ -128,41 +133,36 @@ const Contact = () => {
     }
   };
 
-  const styleFocused = finish
-    ? 'w-full shadow-custom2 shadow-[#60f073] p-4 justify-center flex flex-col mx-auto'
-    : 'w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto';
-
-  const styleUnfocused =
-    'w-full shadow-custom2 shadow-[#ffffff] p-4 justify-center flex flex-col mx-auto';
-
   return (
     <div
       id="contact"
-      className="w-[90%] m-auto md:h-screen " // pt-4 mt-32 mb-16 lg:mb-16 xl:mb-16
+      className="w-[90%] m-auto items-center flex flex-col" // pt-4 mt-32 mb-16 lg:mb-16 xl:mb-16
     >
-      <div className="max-w-[1240px] m-auto md:py-16 w-full flex flex-col justify-center h-full">
+      <div
+        className="max-w-[1240px] w-full h-full mx-auto flex flex-col justify-center mt-20" //md:py-16
+      >
         <p
           id="contact-start"
-          className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top"
-          data-aos="fade-right"
-          data-aos-anchor="#contact"
-          data-aos-duration="400"
+          className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top text-end"
+          // data-aos="fade-left"
+          // data-aos-anchor="#contact"
+          // data-aos-duration="400"
         >
           Contact
         </p>
         <h2
-          className="py-2 mb-10 header-text-bottom"
-          data-aos="fade-right"
-          data-aos-anchor="#contact"
-          data-aos-duration="400"
+          className="mt-1 text-gray-200 text-end tracking-wide text-2xl md:text-3xl space-mono font-normal mb-4"
+          // data-aos="fade-left"
+          // data-aos-anchor="#contact"
+          // data-aos-duration="400"
         >
           How To Get in Touch
         </h2>
         <div
           className=""
-          data-aos="fade-in"
-          data-aos-anchor="#contact"
-          data-aos-duration="400"
+          // data-aos="fade-left"
+          // data-aos-anchor="#contact"
+          // data-aos-duration="400"
         >
           <div className={finish || focused ? styleFocused : styleUnfocused}>
             <div className="lg:p-2 h-full ">

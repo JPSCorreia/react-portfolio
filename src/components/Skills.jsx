@@ -17,32 +17,57 @@ const Skills = () => {
       className="w-[90%] m-auto h-screen items-center flex flex-col" // w-[90%] m-auto md:h-screen p-2 flex flex-col justify-between md:pt-16 pt-12 mt-24
     >
       <div
-        className="max-w-[1240px] w-full h-full p-2 mx-auto flex flex-col justify-center md:justify-center items-center"
-        data-aos="fade-right"
-        data-aos-anchor="#skills"
-        data-aos-duration="400"
+        className="max-w-[1240px] h-full w-full mx-auto flex flex-col items-center mt-20"
+        // id="skills-container"
+        // data-aos="fade-left"
+        // data-aos-anchor="#skills"
+        // data-aos-duration="400"
       >
         <div className="flex flex-col w-full">
-          <p className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top">
+          <p
+            className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top text-end"
+            // data-aos="fade-left"
+            // data-aos-anchor="#skills"
+            // data-aos-duration="400"
+          >
             Skills
           </p>
           <h2
-            className="pt-2 text-gray-200 font-bold header-text-bottom tracking-wide"
-            data-aos="fade-right"
-            data-aos-anchor="#skills"
-            data-aos-duration="400"
+            className="mt-1 text-gray-200 text-end tracking-wide text-2xl md:text-3xl space-mono font-normal skills-top-text-2"
+            // data-aos="fade-left"
+            // data-aos-anchor="#skills"
+            // data-aos-duration="400"
           >
             What I Can Do
           </h2>
+
           <div className="max-w-[1240px] w-full h-full mx-auto flex flex-col items-center main-with-globe">
-            <div className="rotating-globe width-[20vw] height-[20vh]">
+            <div
+              className="rotating-globe width-[20vw] height-[20vh]"
+              // data-aos="fade-in"
+              // data-aos-anchor="#skills"
+              // data-aos-duration="400"
+              // data-aos-delay="2800"
+            >
               <RotatingGlobe />
             </div>
-            <div className='text-[1.05rem] mt-2'>Experienced with developing in:</div>
-            <div className="flex flex-row mt-3 md:mt-8 md:flex-col">
+            <div
+              className="text-md mt-2 space-mono tracking-wide skills-text"
+              data-aos="fade-left"
+              data-aos-anchor="#skills"
+              data-aos-duration="400"
+            >
+              Experienced with developing in:
+            </div>
+            <div
+              className="flex flex-row mt-3 md:mt-8 md:flex-col skill-icons-container"
+              data-aos="fade-left"
+              data-aos-anchor="#skills"
+              data-aos-duration="400"
+            >
               <div className="flex flex-col mr-1">
                 <div className="md:py-2 text-start text-gray-200 flex flex-col md:flex-row mx-auto">
-                  <span className="flex items-center mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl  ">
                     <SiHtml5
                       className="mr-2"
                       color="#dd4b25"
@@ -51,7 +76,7 @@ const Skills = () => {
                     HTML5
                     <span className="hidden md:inline ml-3 ">-</span>
                   </span>
-                  <span className="flex items-center mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiCss3
                       className="mr-2"
                       color="#2762e9"
@@ -60,7 +85,7 @@ const Skills = () => {
                     CSS3
                     <span className="hidden md:inline ml-3 ">-</span>
                   </span>
-                  <span className="flex items-center justify-start mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiJavascript
                       className="mr-2"
                       color="#efd81f"
@@ -69,7 +94,7 @@ const Skills = () => {
                     Javascript
                     <span className="hidden md:inline ml-3 ">-</span>
                   </span>
-                  <span className="flex items-center justify-start mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiNodedotjs
                       className="mr-2"
                       color="#43853d"
@@ -81,7 +106,7 @@ const Skills = () => {
               </div>
               <div className="flex flex-col ml-1">
                 <div className="md:py-2 text-start text-gray-200 flex flex-col md:flex-row mx-auto">
-                  <span className="flex items-center mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiReact
                       className="mr-2"
                       color="#61dafb"
@@ -90,7 +115,7 @@ const Skills = () => {
                     React.js
                     <span className="hidden md:inline ml-3 ">-</span>
                   </span>
-                  <span className="flex items-center mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiRedux
                       className="mr-2"
                       color="#764abc"
@@ -99,7 +124,7 @@ const Skills = () => {
                     Redux
                     <span className="hidden md:inline ml-3 ">-</span>
                   </span>
-                  <span className="flex items-center mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiExpress
                       className="mr-2"
                       color="#ffffff"
@@ -108,7 +133,7 @@ const Skills = () => {
                     Express.js
                     <span className="hidden md:inline ml-3 ">-</span>
                   </span>
-                  <span className="flex items-center justify-start mr-3 leading-loose tracking-widest text-sm md:text-2xl">
+                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiPostgresql
                       className="mr-2"
                       color="#31648d"

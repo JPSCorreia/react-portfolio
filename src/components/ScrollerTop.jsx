@@ -1,9 +1,9 @@
 import React from 'react'
-import { HiChevronDown } from 'react-icons/hi';
+import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { HashLink } from 'react-router-hash-link';
 import MovingText from 'react-moving-text';
 
-const Scroller = (props) => {
+const ScrollerTop = (props) => {
   return (
     <div
       className="flex flex-col items-center justify-center bg-transparent cursor-pointer  hover:text-[#67E8F9] "
@@ -14,20 +14,20 @@ const Scroller = (props) => {
       // data-aos-delay="0"
       // data-aos-anchor-placement="top-center"
     >
-      <HashLink to={props.link}>
+      <HashLink to='#'>
         <MovingText
           className="space-mono flex flex-col items-center ease-in duration-100 text-md tracking-wide "
           type="pulse"
-          duration="750ms"
+          duration="1000ms"
           delay="0s"
           direction="alternate-reverse"
           timing="ease-in-out"
           iteration="infinite"
           fillMode="none"
         >
-          {props.fromMain ? 'scroll down' : ''}
-          <div className=" hover:text-[#67E8F9] hover:scale-110 mb-4">
-            <HiChevronDown size={48} />
+          scroll to top
+          <div className=" hover:text-[#67E8F9] hover:scale-110 mb-4 p-2">
+            <HiOutlineChevronDoubleUp size={32} />
           </div>
         </MovingText>
       </HashLink>
@@ -35,4 +35,4 @@ const Scroller = (props) => {
   );
 }
 
-export default Scroller
+export default ScrollerTop

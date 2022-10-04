@@ -9,16 +9,17 @@ import Footer from './Footer';
 
 const Home = () => {
   return (
-    <main className="maincontainer">
+    <main className="maincontainer max-w-screen">
       <Main />
-      <div className="h-[5vh]"></div>
+      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <About />
-      <div className="h-[5vh]"></div>
+      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Skills />
-      <div className="h-[5vh]"></div>
+      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Projects />
-      <div className="h-[5vh]"></div>
+      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Contact />
+      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Footer />
     </main>
   );

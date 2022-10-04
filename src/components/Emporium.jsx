@@ -16,15 +16,15 @@ const Emporium = () => {
           className="absolute left-0 h-[20vh] lg:h-[30vh] w-[100%] z-10 object-cover"
           src={emporiumImg}
           alt="/"
-          data-aos="fade-in"
-          data-aos-once
-          data-aos-duration="1000"
+          // data-aos="fade-in"
+          // data-aos-once
+          // data-aos-duration="1000"
         />
         <div className="absolute left-0 w-full top-[20] h-[20vh] lg:h-[30vh] bg-[#121212]/70 z-10"></div>
         <HashLink to="/#projects">
-          <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
+          <div className="absolute top-[70%] z-10 p-6 max-w-[1240px] w-[90%]">
             <p
-              className="text-xl tracking-widest uppercase text-[#67E8F9] cursor-pointer hover:underline underline-offset-4 header-text-top"
+              className="text-xl tracking-widest uppercase text-[#67E8F9] cursor-pointer hover:underline underline-offset-4 header-text-top "
               // data-aos="fade-right"
               // data-aos-anchor="#emporium"
               // data-aos-duration="400"
@@ -52,20 +52,22 @@ const Emporium = () => {
           />
         </div>
       </NavLink>
-      <div className="max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-20">
-        <div className="col-span-4">
+
+      <div className="max-w-[1240px] w-[90%] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-24">
+        <div className="col-span-4 m-auto">
           <h2
-            className="py-2 mb-2"
-            data-aos="fade-right"
-            data-aos-anchor="#emporium"
+            className="mb-5"
+            // data-aos="fade-right"
+            // data-aos-anchor="#emporium"
             data-aos-duration="400"
           >
             Emporium
           </h2>
           <p
-            data-aos="fade-right"
-            data-aos-anchor="#emporium"
-            data-aos-duration="400"
+            // data-aos="fade-right"
+            // data-aos-anchor="#emporium"
+            // data-aos-duration="400"
+            className="w-[90%]"
           >
             Emporium is a PERN stack e-commerce Single Page Application. Users
             can register and login to the application, browse or search for
@@ -75,9 +77,10 @@ const Emporium = () => {
           </p>
           <br />
           <p
-            data-aos="fade-right"
-            data-aos-anchor="#emporium"
-            data-aos-duration="400"
+            // data-aos="fade-right"
+            // data-aos-anchor="#emporium"
+            // data-aos-duration="400"
+            className="w-[90%]"
           >
             This application was built using React, bootstrapped with
             create-react-app and is hosted on Heroku. User registration and
@@ -91,13 +94,13 @@ const Emporium = () => {
           </p>
         </div>
         <div
-          className="col-span-4 lg:col-span-1  shadow-[#67E8F9] mt-2 pl-8 pb-2 pr-4"
-          data-aos="fade-left"
-          data-aos-anchor="#emporium"
-          data-aos-duration="400"
+          className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 md:pl-8 pb-2"
+          // data-aos="fade-left"
+          // data-aos-anchor="#emporium"
+          // data-aos-duration="400"
         >
-          <div className="p-2">
-            <p className="text-center text-xl font-bold pb-2">Technologies</p>
+          <div className="">
+            <p className="text-start text-xl font-bold my-2">Technologies</p>
             <div>
               <div className="flex flex-row flex-start justify-start">
                 <div className="flex items-center">
@@ -151,10 +154,10 @@ const Emporium = () => {
           </div>
         </div>
         <div
-          className="flex flex-row"
-          data-aos="fade-up"
-          data-aos-anchor="#emporium"
-          data-aos-duration="400"
+          className="flex"
+          // data-aos="fade-up"
+          // data-aos-anchor="#emporium"
+          // data-aos-duration="400"
         >
           <a
             href="https://emporium-shop.herokuapp.com/"
@@ -165,7 +168,7 @@ const Emporium = () => {
               leftIcon={<IoPlay />}
               color="#ffffff"
               variant="outline"
-              className="flex flex-center text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100 "
+              className="flex flex-center w-[90%] text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100 "
               size="lg"
             >
               Demo
@@ -180,7 +183,7 @@ const Emporium = () => {
               leftIcon={<FaGithub />}
               color="#ffffff"
               variant="outline"
-              className="flex flex-center ml-2 text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100 "
+              className="flex flex-center w-[90%] text-xl text-center m-auto hover:text-[#67E8F9] ease-in duration-100"
               size="lg"
             >
               Code
