@@ -18,10 +18,10 @@ const Skills = () => {
     >
       <div
         className="max-w-[1240px] h-full w-full mx-auto flex flex-col items-center mt-20"
-        // id="skills-container"
-        // data-aos="fade-left"
-        // data-aos-anchor="#skills"
-        // data-aos-duration="400"
+        id="skills-container"
+        data-aos="fade-left"
+        data-aos-anchor="#skills"
+        data-aos-duration="400"
       >
         <div className="flex flex-col w-full">
           <p
@@ -52,7 +52,7 @@ const Skills = () => {
               <RotatingGlobe />
             </div>
             <div
-              className="text-md mt-2 space-mono tracking-wide skills-text"
+              className="text-md md:text-2xl mt-2 space-mono tracking-wide skills-text md:mt-12"
               data-aos="fade-left"
               data-aos-anchor="#skills"
               data-aos-duration="400"
@@ -60,41 +60,41 @@ const Skills = () => {
               Experienced with developing in:
             </div>
             <div
-              className="flex flex-row mt-3 md:mt-8 md:flex-col skill-icons-container"
+              className="flex flex-row mt-3 md:mt-8 md:flex-row skill-icons-container"
               data-aos="fade-left"
               data-aos-anchor="#skills"
               data-aos-duration="400"
             >
               <div className="flex flex-col mr-1">
-                <div className="md:py-2 text-start text-gray-200 flex flex-col md:flex-row mx-auto">
-                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl  ">
+                <div className="md:py-2 text-start text-gray-200 flex flex-col md:flex-col mx-auto md:mr-12">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl ">
                     <SiHtml5
                       className="mr-2"
                       color="#dd4b25"
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     HTML5
-                    <span className="hidden md:inline ml-3 ">-</span>
+                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
-                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiCss3
                       className="mr-2"
                       color="#2762e9"
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     CSS3
-                    <span className="hidden md:inline ml-3 ">-</span>
+                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
-                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
+                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiJavascript
                       className="mr-2"
                       color="#efd81f"
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     Javascript
-                    <span className="hidden md:inline ml-3 ">-</span>
+                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
-                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
+                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiNodedotjs
                       className="mr-2"
                       color="#43853d"
@@ -105,7 +105,7 @@ const Skills = () => {
                 </div>
               </div>
               <div className="flex flex-col ml-1">
-                <div className="md:py-2 text-start text-gray-200 flex flex-col md:flex-row mx-auto">
+                <div className="md:py-2 text-start text-gray-200 flex flex-col md:flex-col mx-auto">
                   <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
                     <SiReact
                       className="mr-2"
@@ -113,27 +113,27 @@ const Skills = () => {
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     React.js
-                    <span className="hidden md:inline ml-3 ">-</span>
+                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
-                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiRedux
                       className="mr-2"
                       color="#764abc"
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     Redux
-                    <span className="hidden md:inline ml-3 ">-</span>
+                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
-                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
+                  <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiExpress
                       className="mr-2"
                       color="#ffffff"
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     Express.js
-                    <span className="hidden md:inline ml-3 ">-</span>
+                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
-                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl">
+                  <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiPostgresql
                       className="mr-2"
                       color="#31648d"

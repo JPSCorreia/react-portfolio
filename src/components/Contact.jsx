@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 import { contactSchema } from '../validations/ContactValidation';
 import { useFormik } from 'formik';
 import { EmailIcon, CheckIcon, WarningIcon } from '@chakra-ui/icons';
-
 import {
   Button,
   FormControl,
@@ -15,6 +14,7 @@ import {
   Textarea,
   Text,
 } from '@chakra-ui/react';
+import ScrollerTop from './ScrollerTop';
 
 const Contact = () => {
   const toast = useToast();
@@ -22,17 +22,17 @@ const Contact = () => {
   const [finish, setFinish] = useState(false);
   const [focused, setFocused] = useState(false);
   const styleFocused = finish
-    ? 'w-full shadow-custom2 shadow-[#60f073] p-4 justify-center flex flex-col mx-auto'
-    : 'w-full shadow-custom2 shadow-[#67E8F9] p-4 justify-center flex flex-col mx-auto';
+    ? 'w-full shadow-custom2 shadow-[#60f073] p-3 justify-center flex flex-col mx-auto'
+    : 'w-full shadow-custom2 shadow-[#67E8F9] p-3 justify-center flex flex-col mx-auto';
   const styleUnfocused =
-    'w-full shadow-custom2 shadow-[#ffffff] p-4 justify-center flex flex-col mx-auto';
+    'w-full shadow-custom2 shadow-[#ffffff] p-3 justify-center flex flex-col mx-auto';
 
   const formik = useFormik({
     initialValues: {
       user_name: '',
       user_email: '',
       user_phone: '',
-      user_subject: '',
+      // user_subject: '',
       message: '',
     },
     validationSchema: contactSchema,
@@ -136,10 +136,14 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-[90%] m-auto items-center flex flex-col" // pt-4 mt-32 mb-16 lg:mb-16 xl:mb-16
+      className="w-[90%] m-auto items-center h-screen flex flex-col" // pt-4 mt-32 mb-16 lg:mb-16 xl:mb-16
     >
       <div
-        className="max-w-[1240px] w-full h-full mx-auto flex flex-col justify-center mt-20" //md:py-16
+        className="max-w-[1240px] w-full h-full mx-auto flex flex-col mt-20" //md:py-16
+        id="contact-container"
+        data-aos="fade-left"
+        data-aos-anchor="#contact"
+        data-aos-duration="400"
       >
         <p
           id="contact-start"
@@ -151,7 +155,7 @@ const Contact = () => {
           Contact
         </p>
         <h2
-          className="mt-1 text-gray-200 text-end tracking-wide text-2xl md:text-3xl space-mono font-normal mb-4"
+          className="mt-1 text-gray-200 text-end tracking-wide text-2xl md:text-3xl space-mono font-normal mb-4 how-to-contact"
           // data-aos="fade-left"
           // data-aos-anchor="#contact"
           // data-aos-duration="400"
@@ -159,18 +163,22 @@ const Contact = () => {
           How To Get in Touch
         </h2>
         <div
-          className=""
+          className="md:mt-8"
+          id="contact-form"
           // data-aos="fade-left"
           // data-aos-anchor="#contact"
           // data-aos-duration="400"
         >
-          <div className={finish || focused ? styleFocused : styleUnfocused}>
+          <div
+            className={finish || focused ? styleFocused : styleUnfocused}
+            id="contact-complete-form"
+          >
             <div className="lg:p-2 h-full ">
               <div>
                 <div className="col-span-3 w-full h-auto">
                   <div>{focused}</div>
                   <form onSubmit={formik.handleSubmit}>
-                    <div className="grid md:grid-cols-2 gap-8 w-full py-2">
+                    <div className="grid md:grid-cols-2 gap-4 md:gap-8 w-full name-phone-grid">
                       <FormControl
                         isInvalid={
                           formik.errors.user_name && formik.touched.user_name
@@ -178,11 +186,11 @@ const Contact = () => {
                         className="flex flex-col"
                       >
                         <FormLabel className="pt-2">
-                          <div className="flex flex-row justify-start m-auto items-center">
-                            <Text className="uppercase text-sm font-normal mt-2">
+                          <div className="flex flex-row justify-start m-auto items-end">
+                            <Text className="uppercase text-sm font-normal leading-3 mt-3 contact-name">
                               Name
                             </Text>
-                            <FormErrorMessage className="ml-2 font-normal">
+                            <FormErrorMessage className="ml-2 font-normal leading-8 mt-0">
                               {formik.errors.user_name}
                             </FormErrorMessage>
                           </div>
@@ -217,8 +225,8 @@ const Contact = () => {
                         }
                       >
                         <FormLabel className="pt-2">
-                          <div className="flex flex-row justify-start m-auto items-center">
-                            <Text className="uppercase text-sm font-normal mt-2">
+                          <div className="flex flex-row justify-start m-auto items-end">
+                            <Text className="uppercase text-sm font-normal leading-3 mt-3 contact-phone">
                               Phone Number
                             </Text>
                             <FormErrorMessage className="ml-2 font-normal">
@@ -258,8 +266,8 @@ const Contact = () => {
                       className="flex flex-col py-4"
                     >
                       <FormLabel className="pt-2">
-                        <div className="flex flex-row justify-start m-auto items-center">
-                          <Text className="uppercase text-sm font-normal mt-2">
+                        <div className="flex flex-row justify-start m-auto items-end">
+                          <Text className="uppercase text-sm font-normal leading-3 mt-3 contact-email">
                             Email
                           </Text>
                           <FormErrorMessage className="ml-2 font-normal">
@@ -291,7 +299,7 @@ const Contact = () => {
                       />
                     </FormControl>
 
-                    <FormControl
+                    {/* <FormControl
                       isInvalid={
                         formik.errors.user_subject &&
                         formik.touched.user_subject
@@ -299,7 +307,7 @@ const Contact = () => {
                       className="flex flex-col py-4"
                     >
                       <FormLabel className="uppercase text-sm pt-4 font-light">
-                        <Text className="uppercase text-sm font-normal">
+                        <Text className="uppercase text-sm font-normal leading-3">
                           Subject
                         </Text>
                       </FormLabel>
@@ -325,17 +333,17 @@ const Contact = () => {
                         value={formik.values.user_subject}
                         // {...formik.getFieldProps('user_subject')}
                       />
-                    </FormControl>
+                    </FormControl> */}
 
                     <FormControl
                       isInvalid={
                         formik.errors.message && formik.touched.message
                       }
-                      className="flex flex-col pt-4"
+                      className="flex flex-col md:pt-4"
                     >
                       <FormLabel className="pt-2">
-                        <div className="flex flex-row justify-start m-auto items-center">
-                          <Text className="uppercase text-sm font-normal mt-2">
+                        <div className="flex flex-row justify-start m-auto items-end">
+                          <Text className="uppercase text-sm font-normal leading-3 mt-3 contact-message">
                             Message
                           </Text>
                           <FormErrorMessage className="ml-2 font-normal">
@@ -367,7 +375,7 @@ const Contact = () => {
                       />
                     </FormControl>
 
-                    <div className="flex flex-row w-[95%] m-auto mt-6 mb-3 md:mb-0">
+                    <div className="flex flex-row w-[95%] m-auto mt-6 mb-3 md:mb-3 send-button">
                       {renderButton()}
                     </div>
                   </form>
@@ -377,6 +385,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ScrollerTop />
     </div>
   );
 }

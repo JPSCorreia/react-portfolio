@@ -10,22 +10,11 @@ const Footer = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center bg-transparent mt-4"
-      id="scroller"
+      className="flex flex-row justify-around md:justify-center bg-transparent mt-7"
+      id="footer"
     >
-      {/* <HashLink to="#">
-        <div
-          className="p-6 m-1 mt-2 md:mt-16 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100"
-          data-aos="fade-up"
-          data-aos-anchor="#scroller"
-          data-aos-duration="100"
-        >
-          <HiOutlineChevronDoubleUp size={48} />
-        </div>
-      </HashLink> */}
-      <ScrollerTop />
-      <div className="flex justify-start py-1 items-center">
-        <p className="p-2 m-2 md:m-4 text-sm">© 2022 João Correia</p>
+      <p className="text-sm self-center pt-0.5">© 2022 João Correia</p>
+      <div className="flex justify-start mb-1 items-center">
         <a
           href="https://github.com/JPSCorreia"
           target="_blank"

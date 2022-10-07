@@ -10,6 +10,6 @@ export const contactSchema = yup.object().shape({
     .email('* invalid format')
     .required('* required'),
   user_phone: yup.string().matches(phoneRegExp, '* invalid number'),
-  user_subject: yup.string(),
+  // user_subject: yup.string(),
   message: yup.string().required('* required'),
 });

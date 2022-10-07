@@ -4,12 +4,12 @@
 @layer base {
 
   body {
-    @apply bg-[#121212] text-[#E5E7EB] tracking-wide 
+    @apply text-[#E5E7EB] tracking-wide 
   
   }
 
   html {
-    @apply bg-[#121212]
+    @apply bg-[#ffffff]
   }
 
   #root {
@@ -34,15 +34,10 @@
 
 }
 
-canvas {
-  // width: 100%;
-}
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  margin-left: calc(100vw - 100%);
-
+  // margin-left: calc(100vw - 100%);
 }
 
  #tsparticles {
@@ -70,11 +65,13 @@ body {
 
 .maincontainer {
   position: relative;
+  min-height: calc(100vh - 40px);
 }
 
 .home-text {
   // margin: 0;
-  font-family: 'Coolvetica';
+  // font-family: 'Coolvetica';
+  font-family: 'Archivo Narrow';
   font-weight: 400;
 }
 
@@ -151,7 +148,98 @@ textarea:focus::placeholder {
   display: none;
 }
 
+@media (max-width:281px) and (max-height: 654px) {
 
+  // Galaxy Fold
+
+  .animated-image {
+    display: none;
+  }
+
+  .rotating-globe {
+    width: 100vw;
+    height: 32vh !important;
+  }
+
+  .skill-icons-container {
+    font-size: 0.8rem
+  }
+  .skills-text {
+    font-size: 0.8rem;
+    margin-top: 3rem !important;
+  }
+  .skills-top-text-2 {
+    margin-bottom: 2rem;
+  }
+
+  #skills-container {
+    margin-top: 4rem;
+  }
+
+  #projects-container {
+    justify-content: start;
+    // margin-bottom: 2rem;
+  }
+  .projects-top-text-2 {
+    margin-bottom: 0rem;
+  }
+  .projects-bottom-container {
+    grid-gap: 2rem;
+    margin-top: 0;
+  }
+
+  .how-to-contact {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .chakra-form__error-message {
+    display: none !important;
+  }
+
+  .contact-message {
+    display: none;
+  }
+
+  .contact-name {
+    display: none;
+  }
+
+  .contact-email {
+    display: none;
+  }
+
+  .contact-phone {
+    display: none;
+  }
+
+  .send-button {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #contact-complete-form {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .chakra-form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .chakra-form__label {
+    padding-top: 0.25rem;
+  }
+
+  .name-phone-grid {
+    grid-gap: 0;
+  }
+
+  #contact-form {
+    margin-top: 1rem;
+  }
+}
 
 @media (min-width:280px) and (max-height: 800px) {
   /* smaller phones */
@@ -193,12 +281,117 @@ textarea:focus::placeholder {
 }
 
 
-@media (min-width:380px)  { 
-  /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (min-width:350px) and (max-height: 750px) { 
+  /* smartphones */ 
+  .rotating-globe {
+    width: 100vw;
+    height: 38vh;
+  }
+  .orbit-controls {
+    display: none;
+  }
+
+  .about-text-1 {
+    margin-top: 2rem;
+  }
+
+  .about-text-2 {
+    margin-top: 0.5rem;
+  }
+
+
+  .skills-text {
+    margin-top: 1rem;
+  }
+
+  #skills-container {
+    justify-content: start;
+    
+  }
+
+  .skill-icons-container {
+    margin-top: 1rem;
+  }
+
+  .skills-top-text-2 {
+    margin-bottom: 0rem;
+  }
+
+  .project-item {
+    margin-top: 1rem;
+  }
+
+  #projects-container {
+    justify-content: start;
+    margin-top: 5rem;
+    // margin-bottom: 2rem;
+  }
+
+  .projects-top-text-2 {
+    margin-bottom: 0rem;
+  }
+
+  .projects-bottom-container {
+    grid-gap: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .chakra-form__error-message {
+    display: none !important;
+  }
+
+  .contact-message {
+    display: none;
+  }
+
+  .contact-name {
+    display: none;
+  }
+
+  .contact-email {
+    display: none;
+  }
+
+  .contact-phone {
+    display: none;
+  }
+
+  .send-button {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #contact-complete-form {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .chakra-form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .chakra-form__label {
+    padding-top: 0.25rem;
+  }
+
+  .name-phone-grid {
+    grid-gap: 0;
+  }
+
+  #contact-form {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:380px) and (max-width: 500px) {
+
+  /* smartphones 380px > */
   .rotating-globe {
     width: 100vw;
     height: 35vh;
   }
+
   .orbit-controls {
     display: none;
   }
@@ -217,12 +410,12 @@ textarea:focus::placeholder {
   }
 
   .skills-text {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   #skills-container {
     justify-content: start;
-    
+
   }
 
   .skill-icons-container {
@@ -230,7 +423,7 @@ textarea:focus::placeholder {
   }
 
   .skills-top-text-2 {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
   .project-item {
@@ -238,10 +431,56 @@ textarea:focus::placeholder {
   }
 
   #projects-container {
-    justify-content: center;
-    margin-bottom: 3rem;
+    justify-content: start;
+    margin-top: 5rem;
+    // margin-bottom: 2rem;
   }
 
+   #contact-form {
+     margin-top: 1.5rem;
+   }
+
+  .chakra-form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .name-phone-grid {
+    grid-gap: 0;
+  }
+
+}
+
+@media (min-width:700px) and (max-width: 1000px) {
+
+  // Tablets
+
+  .rotating-globe {
+      width: 100vw;
+      height: 50vh;
+    }
+
+  .about-container {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  #projects-container {
+    justify-content: center;
+  }
+
+  .skills-top-text-2 {
+    margin-bottom: 1rem;
+  }
+
+  #contact-container {
+    justify-content: center;
+  }
+
+  .projects-bottom-container {
+    // margin-top: 2rem !important;
+    grid-gap: 4rem !important;
+  }
 }
 
 @media (min-width:1240px) {
@@ -257,12 +496,38 @@ textarea:focus::placeholder {
   }
 }
 
-@media only screen and (orientation:landscape) and (max-width:950px) {
-  /* landscape */
-  .rotating-globe {
-    display: none;
-  }
-  .home-intro {
-    margin-top: 5rem;
-  }
+// @media only screen and (orientation:landscape) and (max-width:950px) {
+//   /* landscape */
+//   .rotating-globe {
+//     display: none;
+//   }
+//   .home-intro {
+//     margin-top: 5rem;
+//   }
+// }
+
+@media only screen and (orientation:landscape) {
+    /* landscape */
+      .rotating-globe {
+            width: 100vw;
+            height: 60vh;
+      }
+
+    .skills-text {
+      display: none;
+      font-size: 0.5rem;
+      margin-top: 3rem !important;
+    }
+    .skill-icons-container {
+            font-size: 0.25rem !important;
+            display: none;
+    }
+
+    .projects-bottom-container {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      grid-gap: 1rem !important;
+    }
+    .scroller-top {
+      display: none;
+    }
 }

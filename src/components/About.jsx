@@ -13,7 +13,7 @@ const About = () => {
       className="w-[90%] m-auto h-screen items-center flex flex-col text-sm sm:text-[16px]" // pt-20 pb-24 md:pt-16 mt-64
     >
       <div
-        className="max-w-[1240px] w-full h-full mx-auto flex flex-col justify-top items-center mt-20"
+        className="max-w-[1240px] w-full h-full mx-auto flex flex-col justify-top md:justify-center items-center mt-20 md:mt-0 about-container"
         data-aos="fade-right"
         data-aos-anchor="#about"
         data-aos-duration="400"
@@ -25,19 +25,19 @@ const About = () => {
           </p>
           <div
             className="mt-1 text-gray-200 tracking-wide text-2xl md:text-3xl space-mono font-normal mb-4"
-            data-aos="fade-right"
-            data-aos-delay="0"
-            data-aos-anchor="#about"
-            data-aos-duration="400"
+            // data-aos="fade-right"
+            // data-aos-delay="0"
+            // data-aos-anchor="#about"
+            // data-aos-duration="400"
           >
             Who I am
           </div>
           <div className="flex flex-row">
             <div
               className="flex flex-col"
-              data-aos="fade-right"
-              data-aos-anchor="#about"
-              data-aos-duration="400"
+              // data-aos="fade-right"
+              // data-aos-anchor="#about"
+              // data-aos-duration="400"
             >
               <img
                 className="animated-image mt-1 w-[18vh] block sm:hidden rounded-full ring-2 ring-[#67E8F9]/20 shadow-lg shadow-[#ffffff] hover:shadow-[#67E8F9] mx-auto hover:scale-110 ease-in duration-200 justify-center items-center "

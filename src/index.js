@@ -12,12 +12,13 @@ if (!process.env.REACT_APP_IN_DEVELOPMENT) {
   console.debug = () => {}
 }
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <ChakraProvider resetCSS={false} >
-        <App />
+      <ChakraProvider resetCSS={false}>
+        <App /> 
       </ChakraProvider>
     </Router>
   </React.StrictMode>

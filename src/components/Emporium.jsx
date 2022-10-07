@@ -11,7 +11,7 @@ import { ChevronRightIcon, ChevronLeftIcon} from '@chakra-ui/icons'
 const Emporium = () => {
   return (
     <div id="emporium" className="w-full">
-      <div className="w-screen h-[20vh] lg:h-[30vh] top-20 relative shadow-lg shadow-[#67E8F9] rounded-xl">
+      <div className="w-screen h-[20vh] lg:h-[30vh] relative shadow-lg shadow-[#67E8F9] rounded-xl">
         <img
           className="absolute left-0 h-[20vh] lg:h-[30vh] w-[100%] z-10 object-cover"
           src={emporiumImg}
@@ -22,9 +22,9 @@ const Emporium = () => {
         />
         <div className="absolute left-0 w-full top-[20] h-[20vh] lg:h-[30vh] bg-[#121212]/70 z-10"></div>
         <HashLink to="/#projects">
-          <div className="absolute top-[70%] z-10 p-6 max-w-[1240px] w-[90%]">
+          <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
             <p
-              className="text-xl tracking-widest uppercase text-[#67E8F9] cursor-pointer hover:underline underline-offset-4 header-text-top "
+              className="text-xl tracking-widest uppercase header-text-top text-[#67E8F9] hover:underline underline-offset-4 "
               // data-aos="fade-right"
               // data-aos-anchor="#emporium"
               // data-aos-duration="400"
@@ -53,7 +53,7 @@ const Emporium = () => {
         </div>
       </NavLink>
 
-      <div className="max-w-[1240px] w-[90%] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-24">
+      <div className="max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 ">
         <div className="col-span-4 m-auto">
           <h2
             className="mb-5"

@@ -13,7 +13,9 @@ import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 const TLDReddit = () => {
   return (
     <div id="tldreddit" className="w-full ">
-      <div className="w-screen h-[20vh] lg:h-[30vh] relative top-20 shadow-lg shadow-[#67E8F9] rounded-xl">
+      <div
+        className="w-screen h-[20vh] lg:h-[30vh] relative shadow-lg shadow-[#67E8F9] rounded-xl" /*top-20 */
+      >
         <img
           className="absolute left-0 h-[20vh] lg:h-[30vh] w-[100%] z-10 object-cover"
           src={tldrImg}
@@ -24,9 +26,9 @@ const TLDReddit = () => {
         />
         <div className="absolute left-0 w-full top-[20] h-[20vh] lg:h-[30vh] bg-[#121212]/70 z-10"></div>
         <HashLink to="/#projects">
-          <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
+          <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] ">
             <p
-              className="text-xl tracking-widest uppercase header-text-top text-[#67E8F9] hover:underline underline-offset-4 "
+              className="text-xl tracking-widest uppercase header-text-top text-[#67E8F9] hover:underline underline-offset-4 mb-2 "
               // data-aos="fade-right"
               // data-aos-anchor="#tldreddit"
               // data-aos-duration="400"
@@ -54,10 +56,10 @@ const TLDReddit = () => {
           />
         </div>
       </NavLink>
-      <div className="max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-20">
+      <div className="max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 ">
         <div className="col-span-4 ">
           <h2
-            className="py-2 mb-4"
+            className="pb-2 mb-4"
             data-aos="fade-right"
             data-aos-anchor="#tldreddit"
             data-aos-duration="400"
@@ -90,12 +92,12 @@ const TLDReddit = () => {
           </p>
         </div>
         <div
-          className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 pl-8 pb-2 pr-4"
+          className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 pl-0 pb-2 pr-4"
           data-aos="fade-left"
           data-aos-anchor="#tldreddit"
           data-aos-duration="400"
         >
-          <div className="p-2">
+          <div className="p-2 pl-0">
             <p className="text-start text-xl font-bold pb-2">Technologies</p>
             <div>
               <div className="flex flex-row flex-start justify-start">

@@ -4,12 +4,12 @@ import About from './About'
 import Skills from './Skills'
 import Projects from './Projects'
 import Contact from './Contact'
-import Footer from './Footer';
+
 
 
 const Home = () => {
   return (
-    <main className="maincontainer max-w-screen">
+    <main className="maincontainer flex flex-col max-w-screen">
       <Main />
       <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <About />
@@ -19,8 +19,6 @@ const Home = () => {
       <Projects />
       <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Contact />
-      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
-      <Footer />
     </main>
   );
 }
