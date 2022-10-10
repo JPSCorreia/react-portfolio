@@ -17,7 +17,7 @@ const Main = () => {
         <div className="flex flex-col main h-[100%] home-intro mt-24 sm:mt-36 justify-center">
           <div className="flex flex-col">
             <div
-              className="text-start text-[#67E8F9] text-lg lg:text-2xl whitespace-nowrap space-mono mb-4"
+              className="text-start text-[#67E8F9] text-lg md:text-2xl whitespace-nowrap space-mono mb-4"
               data-aos="fade-up"
               data-aos-anchor="#home"
               data-aos-duration="500"

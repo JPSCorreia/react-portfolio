@@ -6,7 +6,7 @@ import MovingText from 'react-moving-text';
 const Scroller = (props) => {
   return (
     <div
-      className="flex flex-col items-center justify-center bg-transparent cursor-pointer  hover:text-[#67E8F9] "
+      className="flex flex-col items-center justify-center bg-transparent cursor-pointer hover:text-[#67E8F9] mt-2 z-500"
       // data-aos="fade-up"
       // data-aos-anchor="#navbar"
       // data-aos-offset="70"
