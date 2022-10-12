@@ -8,6 +8,7 @@ import Scroller from './Scroller'
 
 const Main = () => {
 
+
   return (
     <div
       id="home"

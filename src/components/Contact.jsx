@@ -133,6 +133,7 @@ const Contact = () => {
     }
   };
 
+
   return (
     <div
       id="contact"
@@ -173,7 +174,7 @@ const Contact = () => {
             className={finish || focused ? styleFocused : styleUnfocused}
             id="contact-complete-form"
           >
-            <div className="lg:p-2 h-full ">
+            <div className="lg:p-2 h-full contact-complete-form-2">
               <div>
                 <div className="col-span-3 w-full h-auto">
                   <div>{focused}</div>

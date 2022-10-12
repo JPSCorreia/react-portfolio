@@ -7,6 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const About = () => {
 
+
   return (
     <div
       id="about"

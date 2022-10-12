@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import Scroller from './Scroller';
 
 const Projects = () => {
+
   return (
     <div
       id="projects"
@@ -34,7 +35,7 @@ const Projects = () => {
             What I've Built
           </h2>
           <div
-            className="grid grid-cols-1 md:grid-cols-1 gap-12 md:gap-24 mt-8 md:mt-16 projects-bottom-container"
+            className="grid grid-cols-1 gap-12 md:gap-24 mt-8 md:mt-16 projects-bottom-container"
             data-aos="fade-right"
             data-aos-anchor="#projects"
             data-aos-duration="400"

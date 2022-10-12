@@ -7,7 +7,6 @@ import { NavLink } from 'react-router-dom';
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import TLDRedditTechnologies from './TLDRedditTechnologies';
 import EmporiumTechnologies from './EmporiumTechnologies';
-import SideScroller from './SideScroller';
 import ProjectImage from './ProjectImage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -51,8 +50,7 @@ const ProjectType = (props) => {
           </div>
         </HashLink>
       </div>
-
-      {/* <NavLink to={props.navLinkToBack}>
+      <NavLink to={props.navLinkToBack}>
         <div className="flex-row flex-start justify-start hidden 2xl:flex absolute top-[65%] left-[5%] ">
           <ChevronLeftIcon
             className="hover:text-[#67E8F9] hover:scale-110 ease-in duration-100"
@@ -60,11 +58,8 @@ const ProjectType = (props) => {
             h={12}
           />
         </div>
-      </NavLink> */}
-
-      <SideScroller navLinkToBack={props.navLinkToBack} toLeft={true} classProp={'flex-row flex-start justify-start hidden 2xl:flex absolute top-[65%] left-[5%] '} />
-      <SideScroller navLinkToBack={props.navLinkToNext} toLeft={false} classProp={'flex-row flex-start justify-start hidden 2xl:flex absolute top-[65%] left-[92%] '} />
-      {/* <NavLink to={props.navLinkToNext}>
+      </NavLink>
+      <NavLink to={props.navLinkToNext}>
         <div className="flex-row flex-start justify-start hidden 2xl:flex absolute top-[65%] left-[92%] ">
           <ChevronRightIcon
             className="hover:text-[#67E8F9] hover:scale-110 ease-in duration-100"
@@ -72,12 +67,11 @@ const ProjectType = (props) => {
             h={12}
           />
         </div>
-      </NavLink> */}
-
-      <div className="max-w-[1240px] mx-auto p-6 flex flex-col "> {/* lg:grid-cols-5 */}
+      </NavLink>
+      <div className="max-w-[1240px] mx-auto p-6 grid  gap-8 "> {/* lg:grid-cols-5 */}
         <div className=""> {/* col-span-1 */}
           <h2
-            className="mb-4"
+            className="pb-2 mb-4"
             data-aos="fade-right"
             data-aos-anchor={props.AOSAnchor}
             data-aos-duration="400"
@@ -85,13 +79,13 @@ const ProjectType = (props) => {
             {props.projectTitle}
           </h2>
           <p
-            className='mb-4'
             data-aos="fade-right"
             data-aos-anchor={props.AOSAnchor}
             data-aos-duration="400"
           >
             {props.projectParagraphOne}
           </p>
+          <br />
           <p
             data-aos="fade-right"
             data-aos-anchor={props.AOSAnchor}
@@ -100,7 +94,7 @@ const ProjectType = (props) => {
             {props.projectParagraphTwo}
           </p>
         </div>
-        {props.projectId === 'tldreddit' ? <TLDRedditTechnologies AOSAnchor={props.AOSAnchor} /> : ''}
+        {props.projectId === 'tldreddit' ? <TLDRedditTechnologies /> : ''}
         {props.projectId === 'emporium' ? <EmporiumTechnologies AOSAnchor={props.AOSAnchor} /> : ''}
         <div
           className="flex flex-row"

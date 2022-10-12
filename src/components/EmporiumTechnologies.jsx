@@ -8,15 +8,15 @@ import {
   SiPostgresql,
 } from 'react-icons/si';
 
-const EmporiumTechnologies = () => {
+const EmporiumTechnologies = (props) => {
   return (
     <div
-      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 md:pl-8 pb-2"
+      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 pb-2"
       data-aos="fade-left"
-      data-aos-anchor="#emporium"
+      data-aos-anchor={props.AOSAnchor}
       data-aos-duration="400"
     >
-      <div className="">
+      <div className="p-2 pl-0">
         <p className="text-start text-xl font-bold my-2">Technologies</p>
         <div>
           <div className="flex flex-row flex-start justify-start">

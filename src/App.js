@@ -9,35 +9,47 @@ import ParticleContainer from './components/ParticleContainer';
 import Loader from './components/Loader';
 import Footer from './components/Footer';
 import ProjectType from './components/ProjectType';
+import ProjectType2 from './components/ProjectType2';
 import TLDRedditLogo from "./assets/projects/tldreddit-full.png"
 import EmporiumLogo from './assets/projects/emporium-full.png';
+import Aos from 'aos';
 
 function App() {
 
   const [loaded, setLoaded] = useState(false);
-  const [loadedTwo, setLoadedTwo] = useState(false);
+  // const [loadedTwo, setLoadedTwo] = useState(false);
   const particlesLoaded = (container) => {
     setLoaded(true);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoadedTwo(true);
-    }, 1500);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoadedTwo(true);
+  //   }, 1500);
+  // }, []);
 
-  function useScrollToTop() {
-    const { pathname } = useLocation(); 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
-  }
-  useScrollToTop();
+  // useEffect(() => {
+  //   Aos.init({
+  //     // delay: 100,
+  //     easing: 'ease-in',
+  //     duration: 0,
+  //     mirror: true,
+  //   });
+  // }, []);
+
+  //function useScrollToTop() {
+  //   const { pathname } = useLocation(); 
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, [pathname]);
+  // }
+  // useScrollToTop();
   
   return (
     <div className='flex flex-col' id='App'>
       <ParticleContainer particlesLoaded={particlesLoaded} />
-      {(loaded && loadedTwo)? (
+      {/* && loadedTwo */}
+      {(loaded )? ( 
         <>
           <Navbar className="max-w-screen" />
           <Routes>

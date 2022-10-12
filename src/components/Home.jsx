@@ -1,13 +1,24 @@
-import React from 'react'
 import Main from './Main'
 import About from './About'
 import Skills from './Skills'
 import Projects from './Projects'
 import Contact from './Contact'
-
-
+import React, {useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+
+    useEffect(() => {
+    AOS.init({
+      // delay: 100,
+      easing: 'ease-in',
+      duration: 0,
+      mirror: true,
+    });
+    // AOS.refresh();
+  }, []);
+
   return (
     <main className="maincontainer flex flex-col max-w-screen">
       <Main />

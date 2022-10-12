@@ -5,9 +5,9 @@ import { DiSass } from 'react-icons/di';
 const TLDRedditTechnologies = () => {
   return (
     <div
-      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 pl-0 pb-2 pr-4"
+      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 pb-2"
       data-aos="fade-left"
-      data-aos-anchor="#footer"
+      data-aos-anchor="#tldreddit"
       data-aos-duration="400"
     >
       <div className="p-2 pl-0">

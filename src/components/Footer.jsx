@@ -10,10 +10,10 @@ const Footer = () => {
 
   return (
     <div
-      className="flex flex-row justify-around md:justify-center bg-transparent mt-7 px-2"
+      className="flex flex-row bg-transparent mt-7 px-2"
       id="footer"
     >
-      <p className="text-sm self-center pt-0.5 footer-text">© 2022 João Correia</p>
+      <p className="text-sm self-center  footer-text p-2 m-1">© 2022 João Correia</p>
       <div className="flex justify-start mb-1 items-center">
         <a
           href="https://github.com/JPSCorreia"

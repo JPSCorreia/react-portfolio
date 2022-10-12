@@ -31,12 +31,7 @@ function RotatingGlobe() {
       } 
       
       camera={{ position: [0, 50, 125], fov: 57 }}
-      // data-aos='fade-in' 
-      // data-aos-mirror='false' 
-      // data-aos-delay='200' 
-      // data-aos-duration='1500'
     >
-      <group>
       <ambientLight />
       <directionalLight color={color2} position={[0, -1, 0]} intensity={1.25}/>
       <directionalLight color={color2} position={[0, 1, 0]} intensity={1.25} />
@@ -56,7 +51,6 @@ function RotatingGlobe() {
       {
         isTabletOrMobile? '' : <OrbitControls className='orbit-controls' enablePan={false} enableZoom={false} />
       }
-      </group>
     </Canvas>
   )
 }

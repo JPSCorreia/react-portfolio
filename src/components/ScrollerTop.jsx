@@ -14,7 +14,7 @@ const ScrollerTop = (props) => {
       // data-aos-delay="0"
       // data-aos-anchor-placement="top-center"
     >
-      <HashLink to='#'>
+      <HashLink to='#home'>
         <MovingText
           className="space-mono flex flex-col items-center ease-in duration-100 text-md tracking-wide "
           type="pulse"
