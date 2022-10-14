@@ -17,7 +17,7 @@ const Skills = () => {
       className="w-[90%] m-auto h-screen items-center flex flex-col" // w-[90%] m-auto md:h-screen p-2 flex flex-col justify-between md:pt-16 pt-12 mt-24
     >
       <div
-        className="max-w-[1240px] h-full w-full mx-auto flex flex-col items-center mt-20"
+        className="max-w-[1240px] h-full w-full mx-auto flex flex-col items-center mt-20 justify-top md:justify-center"
         id="skills-container"
         data-aos="fade-left"
         data-aos-anchor="#skills"
@@ -26,17 +26,11 @@ const Skills = () => {
         <div className="flex flex-col w-full">
           <p
             className="text-xl tracking-widest uppercase text-[#67E8F9] header-text-top text-end"
-            // data-aos="fade-left"
-            // data-aos-anchor="#skills"
-            // data-aos-duration="400"
           >
             Skills
           </p>
           <h2
             className="mt-1 text-gray-200 text-end tracking-wide text-2xl md:text-3xl space-mono font-normal skills-top-text-2"
-            // data-aos="fade-left"
-            // data-aos-anchor="#skills"
-            // data-aos-duration="400"
           >
             What I Can Do
           </h2>
@@ -44,10 +38,6 @@ const Skills = () => {
           <div className="max-w-[1240px] w-full h-full mx-auto flex flex-col items-center main-with-globe">
             <div
               className="rotating-globe width-[20vw] height-[20vh]"
-              // data-aos="fade-in"
-              // data-aos-anchor="#skills"
-              // data-aos-duration="400"
-              // data-aos-delay="2800"
             >
               <RotatingGlobe />
             </div>
@@ -74,7 +64,6 @@ const Skills = () => {
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     HTML5
-                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
                   <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiCss3
@@ -83,7 +72,6 @@ const Skills = () => {
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     CSS3
-                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
                   <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiJavascript
@@ -92,7 +80,6 @@ const Skills = () => {
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     Javascript
-                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
                   <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiNodedotjs
@@ -113,7 +100,6 @@ const Skills = () => {
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     React.js
-                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
                   <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiRedux
@@ -122,7 +108,6 @@ const Skills = () => {
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     Redux
-                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
                   <span className="flex items-center mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiExpress
@@ -131,7 +116,6 @@ const Skills = () => {
                       size={isTabletOrMobile ? 24 : 32}
                     />
                     Express.js
-                    {/* <span className="hidden md:inline ml-3 ">-</span> */}
                   </span>
                   <span className="flex items-center justify-start mr-3 leading-loose tracking-wide space-mono text-md md:text-2xl md:mt-2">
                     <SiPostgresql

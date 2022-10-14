@@ -4,7 +4,7 @@ const ProjectImage = (props) => {
   return (
     <>
         <img
-          className="absolute left-0 h-[20vh] lg:h-[30vh] w-[100%] z-10 object-cover opacity-50"
+          className="absolute top-left-0 h-[20vh] lg:h-[25vh] w-[100%] z-10 object-cover opacity-90"
           src={props.backgroundImageURL}
           alt="/"
           // data-aos="fade-in"

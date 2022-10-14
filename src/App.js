@@ -37,13 +37,13 @@ function App() {
   //   });
   // }, []);
 
-  //function useScrollToTop() {
-  //   const { pathname } = useLocation(); 
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, [pathname]);
-  // }
-  // useScrollToTop();
+  function useScrollToTop() {
+    const { pathname } = useLocation(); 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  }
+  useScrollToTop();
   
   return (
     <div className='flex flex-col' id='App'>

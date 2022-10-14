@@ -8,10 +8,11 @@ const ProjectItem = (props) => {
         {props.title}
       </p> */}
       {/* hover:bg-gradient-to-r from-[#0891B2]/80 to-[#67E8F9]/80 */}
-      <div className="relative flex items-center justify-center cursor-pointer h-auto w-full shadow-custom3 group-hover:bg-gradient-to-r from-[#0891B2] to-[#67E8F9] group-hover:shadow-[#67E8F9] shadow-[#ffffff] p-3 py-8 md:py-12 project-item-container">
+      {/* group-hover:shadow-[#67E8F9] */}
+      <div className="relative flex items-center justify-center cursor-pointer h-auto w-full shadow-custom2 group-hover:shadow-custom4 group-hover:bg-gradient-to-r from-[#0891B2] via-[#67E8F9] to-[#0891B2]  shadow-[#ffffff] p-3 py-8 md:py-12 project-item-container">
         <>
           <img
-            className=" group-hover:opacity-80 "
+            className=""
             src={props.backgroundImg}
             alt="/"
           />

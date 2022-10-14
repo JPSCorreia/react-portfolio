@@ -140,7 +140,7 @@ const Contact = () => {
       className="w-[90%] m-auto items-center h-screen flex flex-col" // pt-4 mt-32 mb-16 lg:mb-16 xl:mb-16
     >
       <div
-        className="max-w-[1240px] w-full h-full mx-auto flex flex-col mt-20" //md:py-16
+        className="max-w-[1240px] w-full h-full mx-auto flex flex-col mt-20 md:justify-center" //md:py-16
         id="contact-container"
         data-aos="fade-left"
         data-aos-anchor="#contact"

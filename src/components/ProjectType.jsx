@@ -25,9 +25,9 @@ const ProjectType = (props) => {
   }, []);
 
   return (
-    <div id={props.projectId} className="w-full ">
+    <div id={props.projectId} className="w-full items-center flex flex-col project-type">
       <div
-        className="w-screen h-[20vh] lg:h-[30vh] relative shadow-lg shadow-[#67E8F9] rounded-xl" /*top-20 */
+        className="w-screen h-[20vh] lg:h-[25vh] relative shadow-lg shadow-[#67E8F9] " /*top-20 */
       >
         {/* <img
           className="absolute left-0 h-[20vh] lg:h-[30vh] w-[100%] z-10 object-cover opacity-50"
@@ -38,13 +38,14 @@ const ProjectType = (props) => {
           data-aos-duration="1000"
         /> */}
         <ProjectImage backgroundImageURL={props.backgroundImageURL} AOSAnchor={props.AOSAnchor} />
-        <div className="absolute left-0 w-full top-[20] h-[20vh] lg:h-[30vh] bg-[#121212]/70 z-10"></div>
+        <div className="absolute lg:top-left-0 w-full lg:top-20 h-[20vh] lg:h-[calc(25vh-80px)] bg-[#121212]/70 z-10"></div>
         <HashLink to="/#projects">
           <div className="absolute top-[94%] z-10 p-6 max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] ">
             <p
               className="text-xl tracking-widest uppercase header-text-top text-[#67E8F9] hover:underline underline-offset-4 mb-2 "
               data-aos="fade-right"
               data-aos-duration="400"
+              data-aos-offset="200"
             >
               Projects
             </p>
@@ -62,8 +63,8 @@ const ProjectType = (props) => {
         </div>
       </NavLink> */}
 
-      <SideScroller navLinkToBack={props.navLinkToBack} toLeft={true} classProp={'flex-row flex-start justify-start hidden 2xl:flex absolute top-[65%] left-[5%] '} />
-      <SideScroller navLinkToBack={props.navLinkToNext} toLeft={false} classProp={'flex-row flex-start justify-start hidden 2xl:flex absolute top-[65%] left-[92%] '} />
+      <SideScroller navLinkToBack={props.navLinkToBack} toLeft={true} classProp={'flex-row flex-start justify-start hidden 2xl:flex absolute top-[56%] left-[5%] '} />
+      <SideScroller navLinkToBack={props.navLinkToNext} toLeft={false} classProp={'flex-row flex-start justify-start hidden 2xl:flex absolute top-[56%] left-[92%] '} />
       {/* <NavLink to={props.navLinkToNext}>
         <div className="flex-row flex-start justify-start hidden 2xl:flex absolute top-[65%] left-[92%] ">
           <ChevronRightIcon
@@ -74,8 +75,9 @@ const ProjectType = (props) => {
         </div>
       </NavLink> */}
 
-      <div className="max-w-[1240px] mx-auto p-6 flex flex-col "> {/* lg:grid-cols-5 */}
-        <div className=""> {/* col-span-1 */}
+      <div className="max-w-[1240px] mx-auto p-6 flex flex-col project-type-contain"> {/* lg:grid-cols-5 */}
+        <div className='flex flex-col project-type-container'>
+        <div className=''>
           <h2
             className="mb-4"
             data-aos="fade-right"
@@ -100,10 +102,11 @@ const ProjectType = (props) => {
             {props.projectParagraphTwo}
           </p>
         </div>
+        <div className='flex flex-col justify-between '>
         {props.projectId === 'tldreddit' ? <TLDRedditTechnologies AOSAnchor={props.AOSAnchor} /> : ''}
         {props.projectId === 'emporium' ? <EmporiumTechnologies AOSAnchor={props.AOSAnchor} /> : ''}
         <div
-          className="flex flex-row"
+          className="flex flex-row mt-4"
           data-aos="fade-up"
           data-aos-anchor={props.AOSAnchor}
           data-aos-duration="400"
@@ -130,6 +133,8 @@ const ProjectType = (props) => {
               Code
             </Button>
           </a>
+        </div>
+        </div>
         </div>
       </div>
     </div>

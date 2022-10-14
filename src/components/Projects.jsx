@@ -14,7 +14,7 @@ const Projects = () => {
       className="w-[90%] m-auto h-screen items-center flex flex-col"
     >
       <div
-        className="max-w-[1240px] w-full h-full mx-auto flex flex-col items-center"
+        className="max-w-[1240px] w-full h-full mx-auto flex flex-col items-center md:justify-center"
         id="projects-container"
       >
         <div className="flex flex-col w-full">

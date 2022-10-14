@@ -5,13 +5,13 @@ import { DiSass } from 'react-icons/di';
 const TLDRedditTechnologies = () => {
   return (
     <div
-      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mt-2 pb-2"
+      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mb-2"
       data-aos="fade-left"
       data-aos-anchor="#tldreddit"
       data-aos-duration="400"
     >
-      <div className="p-2 pl-0">
-        <p className="text-start text-xl font-bold pb-2">Technologies</p>
+      <div className="">
+        <p className="text-start text-xl font-bold my-2">Technologies</p>
         <div>
           <div className="flex flex-row flex-start justify-start">
             <div className="flex items-center">
