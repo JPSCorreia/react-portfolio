@@ -95,7 +95,7 @@ const Main = () => {
         </div>
       </div>
 
-      <Scroller link="#about" fromMain />
+      <Scroller scrollerID="main-scroller" link="#about" text="scroll down" AOSAnchor="#navbar" AOSOffset="70" AOSAnchorPlacement="top-center" AOSAnimation="fade-up" />
     </div>
   );
 }

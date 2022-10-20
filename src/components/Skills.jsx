@@ -131,7 +131,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <Scroller link="#projects" />
+      <Scroller scrollerID="skills-scroller" link="#projects" text="projects" AOSAnimation="fade-up" AOSAnchor="#after-about" AOSOffset="-50" AOSAnchorPlacement="bottom-bottom"/>
     </div>
   );
 }

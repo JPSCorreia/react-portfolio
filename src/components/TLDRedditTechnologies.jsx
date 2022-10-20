@@ -1,17 +1,18 @@
 import React from 'react'
 import { SiJest, SiReactrouter, SiRedux, SiReact } from 'react-icons/si';
 import { DiSass } from 'react-icons/di';
+import { IoLogoReddit } from 'react-icons/io'
 
 const TLDRedditTechnologies = () => {
   return (
     <div
-      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mb-2"
+      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mb-4"
       data-aos="fade-left"
       data-aos-anchor="#tldreddit"
       data-aos-duration="400"
     >
       <div className="">
-        <p className="text-start text-xl font-bold my-2">Technologies</p>
+        <p className="text-start text-xl font-bold mt-4 mb-2">Technologies</p>
         <div>
           <div className="flex flex-row flex-start justify-start">
             <div className="flex items-center">
@@ -37,6 +38,14 @@ const TLDRedditTechnologies = () => {
               <h3>React Router</h3>
             </div>
           </div>
+                    <div className="flex flex-row flex-start justify-start">
+            <div className="flex items-center">
+              <IoLogoReddit color="#ff4017" size={24} />
+            </div>
+            <div className="m-2">
+              <h3>Reddit API</h3>
+            </div>
+          </div>
           <div className="flex flex-row flex-start justify-start">
             <div className="flex items-center">
               <DiSass color="#c76594" size={24} />
@@ -45,6 +54,7 @@ const TLDRedditTechnologies = () => {
               <h3>Sass</h3>
             </div>
           </div>
+
           <div className="flex flex-row flex-start justify-start">
             <div className="flex items-center">
               <SiJest color="#c03c14" size={24} />

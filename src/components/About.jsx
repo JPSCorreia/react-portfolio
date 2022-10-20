@@ -58,7 +58,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Scroller link="#skills" />
+      <Scroller scrollerID="about-scroller" text="skills" link="#skills" AOSAnimation="fade-up" AOSAnchor="#after-main" AOSOffset="-50" AOSAnchorPlacement="bottom-bottom"/>
     </div>
   );
 }

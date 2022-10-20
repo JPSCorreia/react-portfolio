@@ -72,7 +72,7 @@ const Projects = () => {
         </div>
       </div>
       <div id="contact-top"></div>
-      <Scroller link="#contact" />
+      <Scroller scrollerID="projects-scroller" link="#contact" text="contact" AOSAnimation="fade-up" AOSAnchor="#after-skills" AOSOffset="-50" AOSAnchorPlacement="bottom-bottom"/>
     </div>
   );
 }

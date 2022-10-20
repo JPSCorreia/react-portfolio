@@ -15,6 +15,7 @@ const Home = () => {
       easing: 'ease-in',
       duration: 0,
       mirror: true,
+      // once: true,
     });
     // AOS.refresh();
   }, []);
@@ -22,13 +23,13 @@ const Home = () => {
   return (
     <main className="maincontainer flex flex-col max-w-screen">
       <Main />
-      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
+      <div id="after-main" className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <About />
-      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
+      <div id="after-about" className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Skills />
-      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
+      <div id="after-skills" className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Projects />
-      <div className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
+      <div id="after-projects" className="h-[5vh] max-w-screen mx-auto w-[90%]"></div>
       <Contact />
     </main>
   );

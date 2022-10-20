@@ -6,13 +6,14 @@ import MovingText from 'react-moving-text';
 const Scroller = (props) => {
   return (
     <div
+      id={props.scrollerID}
       className="flex flex-col items-center justify-center bg-transparent cursor-pointer hover:text-[#67E8F9] mt-2 z-500"
-      // data-aos="fade-up"
-      // data-aos-anchor="#navbar"
-      // data-aos-offset="70"
-      // data-aos-duration="100"
-      // data-aos-delay="0"
-      // data-aos-anchor-placement="top-center"
+      data-aos={props.AOSAnimation}
+      data-aos-anchor={props.AOSAnchor}
+      data-aos-offset={props.AOSOffset}
+      data-aos-duration="200"
+      data-aos-delay="0"
+      data-aos-anchor-placement={props.AOSAnchorPlacement}
     >
       <HashLink to={props.link}>
         <MovingText
@@ -25,7 +26,7 @@ const Scroller = (props) => {
           iteration="infinite"
           fillMode="none"
         >
-          {props.fromMain ? 'scroll down' : ''}
+          {props.text}
           <div className=" hover:text-[#67E8F9] hover:scale-110 mb-4">
             <HiChevronDown size={48} />
           </div>

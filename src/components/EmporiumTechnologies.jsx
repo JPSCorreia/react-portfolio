@@ -11,13 +11,13 @@ import {
 const EmporiumTechnologies = (props) => {
   return (
     <div
-      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mb-2"
+      className="col-span-4 lg:col-span-1 shadow-[#67E8F9] mb-4"
       data-aos="fade-left"
       data-aos-anchor={props.AOSAnchor}
       data-aos-duration="400"
     >
       <div className="">
-        <p className="text-start text-xl font-bold my-2">Technologies</p>
+        <p className="text-start text-xl font-bold mt-4 mb-2">Technologies</p>
         <div>
           <div className="flex flex-row flex-start justify-start">
             <div className="flex items-center">
