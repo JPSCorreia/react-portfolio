@@ -83,7 +83,7 @@ const Emporium = () => {
             className="w-[90%]"
           >
             This application was built using React, bootstrapped with
-            create-react-app and is hosted on Heroku. User registration and
+            create-react-app and is hosted on Vercel. User registration and
             login are handled by Auth0, state management with Redux and routing
             with react-router. User interface was built with ChakraUI as a
             component library and using formik and yup for form management and
@@ -160,7 +160,7 @@ const Emporium = () => {
           // data-aos-duration="400"
         >
           <a
-            href="https://emporium-shop.herokuapp.com/"
+            href="https://emporium-shop.vercel.app/"
             target="_blank"
             rel="noreferrer noopener"
           >
